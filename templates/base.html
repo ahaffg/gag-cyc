@@ -22,7 +22,7 @@
 				<a href="{{ url_for('get_tasks') }}" class="brand-logo white-text">GaG | CfC</a>
 				<a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="fas fa-bars"></i></a>
 				<ul class="right hide-on-med-and-down">
-					<li><a class="white-text" href="{{ url_for('get_tasks') }}">Home</a></li>
+					<li><a class="white-text" href="{{ url_for('get_home') }}">Home</a></li>
                     {% if session.user %}
                         <li><a class="white-text" href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
                         <li><a class="white-text" href="{{ url_for('add_task') }}">New Task</a></li>
@@ -75,18 +75,6 @@
     <div class="parallax"><img src="assets/images/coast-path.jpg" alt="Unsplashed background img 1"></div>
   </div>
 
-<!-- footer banner image -->
-      <div class="parallax-container valign-wrapper">
-        <div class="section no-pad-bot">
-          <div class="container">
-            <div class="row center">
-              <h5 class="header col s12 light">Your hub for volunteering opportunities in Ceredigion.</h5>
-            </div>
-          </div>
-        </div>
-        <div class="parallax"><img src="/assets/images/coast-path.jpg" alt="Unsplashed background img 3"></div>
-      </div>
-</section>
  <!-- flash messages -->
     <section>
         {% with messages = get_flashed_messages() %}
@@ -100,10 +88,23 @@
         {% endwith %}
     </section>
 
-  <!-- <main class="container">
+<main class="container">
         {% block content %}
         {% endblock %}
-    </main>  -->
+</main>
+
+<!-- footer banner image -->
+      <div class="parallax-container valign-wrapper">
+        <div class="section no-pad-bot">
+          <div class="container">
+            <div class="row center">
+              <h5 class="header col s12 light">Your hub for volunteering opportunities in Ceredigion.</h5>
+            </div>
+          </div>
+        </div>
+        <div class="parallax"><img src="/assets/images/coast-path.jpg" alt="Unsplashed background img 3"></div>
+      </div>
+</section>
 
 <!--  Footer-->
 <footer class="page-footer blue darken-4">
