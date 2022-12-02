@@ -11,10 +11,25 @@
    color: #444;
  }
  
+hr {
+  color:white;
+}
+
  p {
    line-height: 2rem;
+   font-size:1.5rem;
+   color:navy;
  }
  
+ .card-content p {
+  font-size:1rem;
+ }
+
+#gag-logo {
+  max-height: 1vh;
+}
+
+
  .sidenav-trigger {
    color: #26a69a;
  }
