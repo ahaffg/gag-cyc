@@ -1,108 +1,104 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Gofalu am Geredigion | Caring for Ceredigion
 
-Welcome ahaffg,
+## Milestone Project 3
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+This website has been created to advertise and support volunteering opportunities in Ceredigion, a rural, coastal county in west Wales.
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+Volunteering opportunities are grouped into three categories: animals, environment, and people.
 
-## Gitpod Reminders
+Users to the site will be able to view a board of live opportunities and apply for them via a form. The backend of the website will support the storage of the data they provide (via a database) so that it can be passed on to the institutions or bodies providing the opportunities.
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+The website will also provide information about former successful candidates to various schemes and will detail their experiences.
 
-`python3 -m http.server`
+## Table of contents
++ [UX](#ux "UX")
+  + [All user goals](#all-user-goals "All user goals")
+  + [Returning user goals](#returning-user-goals "Returning user goals")
+  + [Future Development](#future-development "Future Development")
++ [Features](#features "Features")
+  + [Clean structure](#clean-structure "Clean structure")
+  + [Logo](#logo "Logo")
+  + [Hero Image](#hero-image "Hero Image")
+  + [Color Palette](#color-palette "Color Palette")
++ [Wireframes](#Wireframes "Wireframes")
+  + [Home Page](#home-page "Home Page")
+  + [Opportunities Page](#opportunities-page "Opportunities Page")
+    + [Cards](#cards "Cards")
+  + [Experiences Page](#experiences-page "Experiences Page")
+  + [Contact Page](#contact-page "Contact Page")
++ [Functionality](#functionality "Functionality")
++ [Technology](#technology "Technology")
++ [Testing](#testing "Testing")
++ [Deployment](#deployment "Deployment")
++ [Credits](#Credits "Credits")
 
-A blue button should appear to click: _Make Public_,
+## UX
+### All user goals
+- Users want to be able to view and apply for volunteering opportunities.
+- Users want to be able to create an account to manage their applications. 
+- Users want to be able to easily navigate through the site.
+- Users want to be able to see how other volunteers have enjoyed their experiences and how they too can benefit from volunteering.
+### Returning user goals
+- Users want to be able to easily log back on and check on application progress.
+- Users want to be able to see new opportunities.
+- Users want to be able to get in contact with ‘Gofalu am Geredigion | Caring for Ceredigion’ easily if they have new opportunities, experiences to report or further questions about opportunities.
+### Future Development
+- By law, all government funded projects must be billingual so this option would need to be offered.
 
-Another blue button should appear to click: _Open Browser_.
+## Features
+### Clean structure
+The website is designed to give the user a great experience and to be user-friendly on all types of devices. There will be no difference in the experience users have when on a mobile compared to a laptop. The front-end code will utilize a combination of [Materialize](https://materializecss.com/) themes and elements to achieve this.
+![Templates](/images/readme/templates.jpg)
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+### Logo
+The logo has been made through adapting Fontawesome Icons that will then be used throughout the site to denote the different catagories of voluntary oppertunities.
 
-A blue button should appear to click: _Make Public_,
+![Logo](/images/readme/GagLogo.png)
+![Icons](/images/readme/fontawesome.jpg)
 
-Another blue button should appear to click: _Open Browser_.
+### Hero Image
+The [hero image](https://www.cardigan-bay.com/cbay/wp-content/uploads/coast-path.jpg) will utilize the zoom animation from the 'Love Running' project and the colors have inspired the color palette.
+![Hero Image](/images/readme/Cardigan-Bay-featured.jpg)
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+### Color Palette
+The colours were sampled in Gimp and then fine-tuned using Coolors. The feel is fresh, spring like and intended to be very easy to read.
+![Color Palette](/images/readme/palette.jpg)
+## Wireframes
+### Home Page
+The home or landing page will welcome visitors and volunteers and give a brief description of whet the website does, and invite them to take a look at the volunteering oppertunities on offer. There will be a navbar that will appear across all pages, a hero image with the zoom animation from the ['Love Runing Project'](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+CSE101+2020_Q2/courseware/be0e510a3aca4bccb6e0bba4cf7cf06b/15fe9d557bcc4af5a117465b9150454f/) and introductory paragraphs about the three catagorys of opportuities available, utilisint the Fontawesome icons. 
+![Home Page](/images/readme/landingPageWireframe.png)
+### Opportunities Page
+The opportunities page has been inspired by the [Code Institute non-relational database waltkthrough project](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+NRDB_L5+2022_Q3/courseware/9e2f12f5584e48acb3c29e9b0d7cc4fe/054c3813e82e4195b5a4d8cd8a99ebaa/) and will utilise cards to display voluteering opportunities that pulls information from a database. 
+![Opportunities Page](/images/readme/opportunitiesPageWireframe.png)
+#### Cards
+[MongoDB](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+NRDB_L5+2022_Q3/courseware/58bca0e827fc46bc862c5e2aeec97468/a4e711e56b114afaace001a03afd1c63/) will be used to create the database, and each opportunity record will be broken down into the following catagories:
+| ID           | Unique key generated by MongoDB |
+| ------------ | ------------------------------- |
+| Category     | Animal/Environment/People       |
+| Tile         | Opportunity title               |
+| Institution  | Name of institution             |
+| Description  | Description of opportunity      |
+| Closing Date | Closing date for applications   |
+### Experiences Page
+The experiences page is influenced byt the [Code Institute Thorin project](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+FL101+2021_T1/courseware/4d995e6a4f384c3dafffdcbde3fd25ef/eb7780e1b9f643d7a956497f29d82f39/) which utilises [Flask](https://flask.palletsprojects.com/en/2.2.x/). I will also use this method to help display text and images from [Pexels](https://www.pexels.com/) to give a story-like feel to the website and add interest.
+![Experiences Page](/images/readme/testimonialsPageWireframe.png)
+### Contact Page
+The contact page will contain a form that will collect user information and store it to another database sitting on MongoDB. This information will be used to address applications and queries from users. The database at the backend of this app will collect the following information:
 
-To log into the Heroku toolbelt CLI:
+| ID           | Unique key generated by MongoDB |
+| ------------ | ------------------------------- |
+| First Name   |Check for valid entry            |
+| Last Name    |Check for valid entry            |
+| Email        |Check for valid e-mail           |
+| Phone Number |(optional)                       |
+| Message      |Check for valid entry            |
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+![Contact Page](/images/readme/contactPageWireframe.png)
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+## Functionality
+In order for the website to work there also needs to be functionality for the users to be able to login and apply for the roles. There will also need to be a sys-admin function that allows for CRUD functionality with the opportunity cards. This functionality will be adapted from the [Code Institute mini project](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+NRDB_L5+2022_Q3/courseware/9e2f12f5584e48acb3c29e9b0d7cc4fe/054c3813e82e4195b5a4d8cd8a99ebaa/).
 
-------
-
-## Release History
-
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
-
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
-
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
-
-**July 2 2021:** Remove extensions that are not available in Open VSX.
-
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
-
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
-
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
-
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
-
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
-
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
-
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
-
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
-
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
-
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
-
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
-
-------
-
-## FAQ about the uptime script
-
-**Why have you added this script?**
-
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
-
-**How will this affect me?**
-
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
-
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
-
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
-
-**So….?**
-
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
-
-**Can I opt out?**
-
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
-
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
-
-**Anything more?**
-
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
-
----
-
-Happy coding!
+## Technology
+## Testing
+## Deployment
+## Credits
