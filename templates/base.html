@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css"
-        integrity="sha512-xA6Hp6oezhjd6LiLZynuukm80f8BoZ3OpcEYaqKoCV3HKQDrYjDE1Gu8ocxgxoXmwmSzM4iqPvCsOkQNiu41GA==" crossorigin="anonymous" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" type="text/css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" type="text/css">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -13,27 +12,27 @@
     
     {% block styles %}
     {% endblock %}
-    <title>Task Manager</title>
+    <title>Gofalu am Geredigion | Caring for Ceredigion</title>
 </head>
 <body>
     <header>
         <!-- top navbar -->
-		<nav class="nav-extended text-shadow light-blue darken-1">
+		<nav class="nav-extended text-shadow blue darken-4">
 			<div class="nav-wrapper">
-				<a href="{{ url_for('get_tasks') }}" class="brand-logo">Task Manager</a>
+				<a href="{{ url_for('get_tasks') }}" class="brand-logo white-text">GaG | CfC</a>
 				<a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="fas fa-bars"></i></a>
 				<ul class="right hide-on-med-and-down">
-					<li><a href="{{ url_for('get_tasks') }}">Home</a></li>
+					<li><a class="white-text" href="{{ url_for('get_tasks') }}">Home</a></li>
                     {% if session.user %}
-                        <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
-                        <li><a href="{{ url_for('add_task') }}">New Task</a></li>
+                        <li><a class="white-text" href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
+                        <li><a class="white-text" href="{{ url_for('add_task') }}">New Task</a></li>
                         {% if session.user|lower == "admin"|lower %}
-                            <li><a href="{{ url_for('get_categories') }}">Manage Categories</a></li>
+                            <li><a class="white-text" href="{{ url_for('get_categories') }}">Manage Categories</a></li>
                         {% endif %}
-                        <li><a href="{{ url_for('logout') }}">Log Out</a></li>
+                        <li><a class="white-text" href="{{ url_for('logout') }}">Log Out</a></li>
                     {% else %}
-                        <li><a href="{{ url_for('login') }}">Log In</a></li>
-                        <li><a href="{{ url_for('register') }}">Register</a></li>
+                        <li><a class="white-text" href="{{ url_for('login') }}">Log In</a></li>
+                        <li><a class="white-text" href="{{ url_for('register') }}">Register</a></li>
                     {% endif %}
 				</ul>
 			</div>
@@ -41,29 +40,30 @@
 
         <!-- mobile sidenav -->
 		<ul class="sidenav" id="mobile-demo">
-            <li><h4 class="center-align light-blue-text text-darken 4">Task Manager</h4></li>
-            <li><a href="{{ url_for('get_tasks') }}">Home</a></li>
+            <li><h4 class="center-align light-blue-text text-darken 4 whit-text">Task Manager</h4></li>
+            <li><a class="white-text"  href="{{ url_for('get_tasks') }}">Home</a></li>
             {% if session.user %}
-                <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
-                <li><a href="{{ url_for('add_task') }}">New Task</a></li>
+                <li><a class="white-text"  href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
+                <li><a class="white-text"  href="{{ url_for('add_task') }}">New Task</a></li>
                 {% if session.user|lower == "admin"|lower %}
-                    <li><a href="{{ url_for('get_categories') }}">Manage Categories</a></li>
+                    <li><a class="white-text"  href="{{ url_for('get_categories') }}">Manage Categories</a></li>
                 {% endif %}
-                <li><a href="{{ url_for('logout') }}">Log Out</a></li>
+                <li><a class="white-text"  href="{{ url_for('logout') }}">Log Out</a></li>
             {% else %}
-                <li><a href="{{ url_for('login') }}">Log In</a></li>
-                <li><a href="{{ url_for('register') }}">Register</a></li>
+                <li><a class="white-text"  href="{{ url_for('login') }}">Log In</a></li>
+                <li><a class="white-text"  href="{{ url_for('register') }}">Register</a></li>
             {% endif %}
 		</ul>
 	</header>
-
+<!-- banner-hero image-->
   <div id="index-banner" class="parallax-container">
     <div class="section no-pad-bot">
       <div class="container">
         <br><br>
-        <h1 class="header center teal-text text-lighten-2">Parallax Template</h1>
+        <h1 class="header center teal-text text-lighten-2">Gofalu am Geredigion<br><hr>
+            Caring for Ceredigion</h1>
         <div class="row center">
-          <h5 class="header col s12 light">A modern responsive front-end framework based on Material Design</h5>
+            <h5 class="header col s12 light teal-text text-lighten-2 ">Your hub for volunteering opportunities in Ceredigion.</h5>
         </div>
         <div class="row center">
           <a href="http://materializecss.com/getting-started.html" id="download-button" class="btn-large waves-effect waves-light teal lighten-1">Get Started</a>
@@ -72,97 +72,23 @@
 
       </div>
     </div>
-    <div class="parallax"><img src="background1.jpg" alt="Unsplashed background img 1"></div>
+    <div class="parallax"><img src="assets/images/coast-path.jpg" alt="Unsplashed background img 1"></div>
   </div>
 
-	
-
-<section>
-    <div class="container">
-        <div class="section">
-    
-          <!--   Icon Section   -->
-          <div class="row">
-            <div class="col s12 m4">
-              <div class="icon-block">
-                <h2 class="center brown-text"><i class="material-icons">flash_on</i></h2>
-                <h5 class="center">Speeds up development</h5>
-    
-                <p class="light">We did most of the heavy lifting for you to provide a default stylings that incorporate our custom components. Additionally, we refined animations and transitions to provide a smoother experience for developers.</p>
-              </div>
-            </div>
-    
-            <div class="col s12 m4">
-              <div class="icon-block">
-                <h2 class="center brown-text"><i class="material-icons">group</i></h2>
-                <h5 class="center">User Experience Focused</h5>
-    
-                <p class="light">By utilizing elements and principles of Material Design, we were able to create a framework that incorporates components and animations that provide more feedback to users. Additionally, a single underlying responsive system across all platforms allow for a more unified user experience.</p>
-              </div>
-            </div>
-    
-            <div class="col s12 m4">
-              <div class="icon-block">
-                <h2 class="center brown-text"><i class="material-icons">settings</i></h2>
-                <h5 class="center">Easy to work with</h5>
-    
-                <p class="light">We have provided detailed documentation as well as specific code examples to help new users get started. We are also always open to feedback and can answer any questions a user may have about Materialize.</p>
-              </div>
-            </div>
-          </div>
-    
-        </div>
-      </div>
-    
-    
+<!-- footer banner image -->
       <div class="parallax-container valign-wrapper">
         <div class="section no-pad-bot">
           <div class="container">
             <div class="row center">
-              <h5 class="header col s12 light">A modern responsive front-end framework based on Material Design</h5>
+              <h5 class="header col s12 light">Your hub for volunteering opportunities in Ceredigion.</h5>
             </div>
           </div>
         </div>
-        <div class="parallax"><img src="background2.jpg" alt="Unsplashed background img 2"></div>
-      </div>
-    
-      <div class="container">
-        <div class="section">
-    
-          <div class="row">
-            <div class="col s12 center">
-              <h3><i class="mdi-content-send brown-text"></i></h3>
-              <h4>Contact Us</h4>
-              <p class="left-align light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque id nunc nec volutpat. Etiam pellentesque tristique arcu, non consequat magna fermentum ac. Cras ut ultricies eros. Maecenas eros justo, ullamcorper a sapien id, viverra ultrices eros. Morbi sem neque, posuere et pretium eget, bibendum sollicitudin lacus. Aliquam eleifend sollicitudin diam, eu mattis nisl maximus sed. Nulla imperdiet semper molestie. Morbi massa odio, condimentum sed ipsum ac, gravida ultrices erat. Nullam eget dignissim mauris, non tristique erat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;</p>
-            </div>
-          </div>
-    
-        </div>
-      </div>
-    
-    
-      <div class="parallax-container valign-wrapper">
-        <div class="section no-pad-bot">
-          <div class="container">
-            <div class="row center">
-              <h5 class="header col s12 light">A modern responsive front-end framework based on Material Design</h5>
-            </div>
-          </div>
-        </div>
-        <div class="parallax"><img src="background3.jpg" alt="Unsplashed background img 3"></div>
+        <div class="parallax"><img src="/assets/images/coast-path.jpg" alt="Unsplashed background img 3"></div>
       </div>
 </section>
-
-
-
-
-
-
-
-
-
+ <!-- flash messages -->
     <section>
-        <!-- flash messages -->
         {% with messages = get_flashed_messages() %}
             {% if messages %}
                 {% for message in messages %}
@@ -180,38 +106,37 @@
     </main>  -->
 
 <!--  Footer-->
-<footer class="page-footer teal">
+<footer class="page-footer blue darken-4">
     <div class="container">
       <div class="row">
         <div class="col l6 s12">
-          <h5 class="white-text">Company Bio</h5>
-          <p class="grey-text text-lighten-4">We are a team of college students working on this project like it's our full time job. Any amount would help support and continue development on this project and is greatly appreciated.</p>
+            <h5 class="white-text">Croeso | Welcome</h5>
+            <p class="grey-text text-lighten-4">We're so glad you're here! This is your online 
+              hub to find out about voluntary opportunities in Ceredigion. Wether you want to 
+              make new friends, give back to the community or build relevant experience for your 
+              CV or field of study, chances are we can match you with an organisation or charity 
+              that would love to hear from you! So take a look around and begin your volunteering 
+              journey today!</p>
 
 
         </div>
         <div class="col l3 s12">
-          <h5 class="white-text">Settings</h5>
-          <ul>
-            <li><a class="white-text" href="#!">Link 1</a></li>
-            <li><a class="white-text" href="#!">Link 2</a></li>
-            <li><a class="white-text" href="#!">Link 3</a></li>
-            <li><a class="white-text" href="#!">Link 4</a></li>
-          </ul>
+          
         </div>
         <div class="col l3 s12">
           <h5 class="white-text">Connect</h5>
           <ul>
-            <li><a class="white-text" href="#!">Link 1</a></li>
-            <li><a class="white-text" href="#!">Link 2</a></li>
-            <li><a class="white-text" href="#!">Link 3</a></li>
-            <li><a class="white-text" href="#!">Link 4</a></li>
+            <li><a class="white-text" href="https://en-gb.facebook.com/" alt="external link to our facebook page"><i class="fa-brands fa-facebook">     Facebook</i></a></li>
+                      <li><a class="white-text" href="https://www.instagram.com/" alt="external link to our instagram account"><i class="fa-brands fa-instagram">    Instagram</i></a></li>
+                      <li><a class="white-text" href="https://twitter.com/" alt="external link to our twitter account"><i class="fa-brands fa-twitter">      Twitter</i></a></li>
+                      <li><a class="white-text" href="https://www.tiktok.com/" alt="external link to our tiktok account"><i class="fa-brands fa-tiktok">       TikTok</i></a></li>
           </ul>
         </div>
       </div>
     </div>
     <div class="footer-copyright">
       <div class="container">
-      Made by <a class="brown-text text-lighten-3" href="http://materializecss.com">Materialize</a>
+        <p class="copyright text-muted center">Copyright &copy; Gofalu am Geredigion | Caring for Ceredigion <span id="copyright"></span></p>
       </div>
     </div>
   </footer>
@@ -223,8 +148,13 @@
     <script src="js/materialize.js"></script>
     <script src="js/init.js"></script>
     <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    <script>
+        $("#copyright").text(new Date().getFullYear());
+    </script>
     {% block scripts %}
     {% endblock %}
+
+    
 </body>
 </html>
 
