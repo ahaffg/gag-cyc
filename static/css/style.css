@@ -1,16 +1,52 @@
-/* Custom Stylesheet */
-/**
- * Use this file to override Materialize files so you can update
- * the core Materialize files in the future
- *
- * Made By MaterializeCSS.com
- */
+body {
+  background-color: #a3adb9;
+}
+
+nav{
+  background-color: #04294b;
+}
 
  nav ul a,
  nav .brand-logo {
    color: #444;
  }
- 
+
+ h2 {
+  color:#04294b;
+ }
+
+ h3 {
+  color:#04294b;
+ }
+
+ h4 {
+  color:#04294b;
+ }
+
+ h5 {
+  color:#04294b;
+ }
+
+.fa-solid {
+  color: #04294b;
+}
+
+#hero-image .container {
+  animation-name: hero-zoom;
+  animation-duration: 5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes hero-zoom {
+  from {
+      transform: scale(1);
+  }
+
+  to {
+      transform: scale(1.1);
+  }
+}
+
 hr {
   color:white;
 }
@@ -18,21 +54,17 @@ hr {
  p {
    line-height: 2rem;
    font-size:1.5rem;
-   color:navy;
+   color:#04294b;
  }
  
  .card-content p {
   font-size:1rem;
  }
 
-#gag-logo {
-  max-height: 1vh;
-}
 
-
- .sidenav-trigger {
+.sidenav-trigger {
    color: #26a69a;
- }
+}
  
  .parallax-container {
    min-height: 380px;
@@ -67,6 +99,11 @@ hr {
    font-size: inherit;
  }
  
+.page-footer {
+  background-color:#04294b;
+}
+
+.page-footer
  footer.page-footer {
    margin: 0;
  }
