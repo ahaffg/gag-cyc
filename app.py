@@ -28,6 +28,10 @@ def get_tasks():
 def get_home():
     return render_template("home.html")
 
+@app.route("/opportunities")
+def opportunities():
+    return render_template("opportunities.html")
+
 @app.route("/our_volunteers")
 def our_volunteers():
     return render_template("our_volunteers.html")
