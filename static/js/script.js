@@ -6,6 +6,7 @@ $(document).ready(function () {
     $(".sidenav").sidenav({edge: "right"});
     $(".collapsible").collapsible();
     $(".tooltipped").tooltip();
+    $('input#input_text, textarea#textarea1').characterCounter();
     $("select").formSelect();
     $(".datepicker").datepicker({
         format: "dd mmmm, yyyy",
@@ -44,3 +45,7 @@ $(document).ready(function () {
         });
     }
 });
+
+$(document).ready(function() {
+    $('input#input_text, textarea#textarea1').characterCounter();
+  });

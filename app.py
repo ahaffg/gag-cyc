@@ -28,13 +28,14 @@ def get_tasks():
 def get_home():
     return render_template("home.html")
 
-@app.route("/opportunities")
-def opportunities():
-    return render_template("opportunities.html")
 
 @app.route("/our_volunteers")
 def our_volunteers():
     return render_template("our_volunteers.html")
+
+@app.route("/get_apply")
+def get_apply():
+    return render_template("apply.html")
 
 
 @app.route("/search", methods=["GET", "POST"])
@@ -129,6 +130,7 @@ def add_task():
             "is_urgent": is_urgent,
             "due_date": request.form.get("due_date"),
             "created_by": session["user"]
+            
         }
         mongo.db.tasks.insert_one(task)
         flash("Task Successfully Added")
@@ -203,6 +205,21 @@ def delete_category(category_id):
     mongo.db.categories.remove({"_id": ObjectId(category_id)})
     flash("Category Successfully Deleted")
     return redirect(url_for("get_categories"))
+
+
+@app.route("/apply", methods=["GET", "POST"])
+def apply():
+        apply = {
+            "task_name" : request.form.get("task_name").lower(),
+            "username": request.form.get("username").lower(),
+            "first_name": request.form.get("first_name").lower(),
+            "last_name": request.form.get("last_name").lower(),
+            "description": request.form.get("description").lower()
+        }
+        mongo.db.apply.insert_one(apply)
+
+        flash("Thank you, we have recieved your application and will be in contact shortly!")
+        return render_template("home.html")
 
 
 if __name__ == "__main__":

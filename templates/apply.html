@@ -1,0 +1,73 @@
+{% extends "base.html" %}
+{% block content %}
+
+    <h3 class="center-align">Apply</h3>
+
+    <div class="row">
+        <form class="col s12 m8 offset-m2" method="POST" action="{{ url_for('apply') }}">
+            <div class="card-panel">
+                <!-- task name -->
+                <div class="row">
+					<div class="input-field col s12">
+						<i class="fas fa-user-plus prefix light-blue-text text-darken-4"></i>
+						<input  id="task_name" name="task_name" type="text" minlength="5"
+                            maxlength="50" class="validate" required>
+						<label for="username">Task Name</label>
+					</div>
+                </div>
+                <!-- username -->
+                <div class="row">
+					<div class="input-field col s12">
+						<i class="fas fa-user-plus prefix light-blue-text text-darken-4"></i>
+						<input value="{{ username }}" id="username" name="username" type="text" minlength="5"
+                            maxlength="30" pattern="^[a-zA-Z0-9]{5,15}$" class="validate" required>
+						<label for="username">Username</label>
+					</div>
+                </div>
+                <!-- personal information -->
+                <div class="row">
+                    <form class="col s12">
+                      <div class="row">
+                        <div class="input-field col s6">
+                          <input  id="first_name" type="text" class="validate">
+                          <label for="first_name">First Name</label>
+                        </div>
+                        <div class="input-field col s6">
+                          <input id="last_name" type="text" class="validate">
+                          <label for="last_name">Last Name</label>
+                        </div>
+                    </div>
+                      <div class="row">
+                        <div class="input-field col s12">
+                          <input id="email" type="email" class="validate">
+                          <label for="email">Email</label>
+                        </div>
+                      </div>
+                      <div class="row">
+                <!-- text area -->
+                <form class="col s12">
+                  <div class="row">
+                    <div class="input-field col s12">
+                      <textarea placeholder="Placeholder" id="textarea1" class="materialize-textarea" class="validate" minlength="5"
+                      maxlength="500"></textarea>
+                      <label for="textarea1">Please give a brief description why you are applying:</label>
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <!-- submit button -->
+            <div class="row">
+              <div class="col s12 center-align">
+                  <button type="submit" class="btn-large lime darken-3 text-shadow">
+                      Apply <i class="fas fa-plus-square right"></i>
+                  </button>
+              </div>
+          </div>
+                    </form>
+                  </div>
+            </div>
+            
+        </form>
+    </div>
+
+{% endblock %}
