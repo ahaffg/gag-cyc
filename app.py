@@ -150,7 +150,7 @@ def edit_task(task_id):
             "is_urgent": is_urgent,
             "due_date": request.form.get("due_date")
         }
-        mongo.db.tasks.update_one(update)({"_id": ObjectId(task_id)}, submit)
+        mongo.db.tasks.update({"_id": ObjectId(task_id)}, submit)
         flash("Task Successfully Updated")
 
     task = mongo.db.tasks.find_one({"_id": ObjectId(task_id)})
