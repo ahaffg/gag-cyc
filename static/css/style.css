@@ -11,6 +11,8 @@ nav{
    color: #444;
  }
 
+
+
  h2 {
   color:#04294b;
  }
@@ -27,11 +29,29 @@ nav{
   color:#04294b;
  }
 
+h5 {
+  text-transform: none;
+}
+
 .fa-solid {
   color: #04294b;
 }
 
+#hero-image .container {
+  animation-name: hero-zoom;
+  animation-duration: 5s;
+  animation-fill-mode: forwards;
+}
 
+@keyframes hero-zoom {
+  from {
+      transform: scale(1);
+  }
+
+  to {
+      transform: scale(1.1);
+  }
+}
 
 hr {
   color:white;
@@ -109,20 +129,4 @@ hr {
 .collapsible-header .col strong {
     margin: 5px;
     line-height: 42px;
-}
-
-#hero-image .container {
-  animation-name: hero-zoom;
-  animation-duration: 5s;
-  animation-fill-mode: forwards;
-}
-
-@keyframes hero-zoom {
-  from {
-      transform: scale(1);
-  }
-
-  to {
-      transform: scale(1.5);
-  }
 }

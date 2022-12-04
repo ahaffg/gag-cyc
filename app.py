@@ -11,6 +11,7 @@ if os.path.exists("env.py"):
 
 app = Flask(__name__)
 
+
 app.config["MONGO_DBNAME"] = os.environ.get("MONGO_DBNAME")
 app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
 app.secret_key = os.environ.get("SECRET_KEY")
@@ -128,9 +129,7 @@ def add_task():
             "task_name": request.form.get("task_name"),
             "task_description": request.form.get("task_description"),
             "is_urgent": is_urgent,
-            "due_date": request.form.get("due_date"),
-            "created_by": session["user"]
-            
+            "due_date": request.form.get("due_date")
         }
         mongo.db.tasks.insert_one(task)
         flash("Task Successfully Added")
@@ -149,10 +148,9 @@ def edit_task(task_id):
             "task_name": request.form.get("task_name"),
             "task_description": request.form.get("task_description"),
             "is_urgent": is_urgent,
-            "due_date": request.form.get("due_date"),
-            "created_by": session["user"]
+            "due_date": request.form.get("due_date")
         }
-        mongo.db.tasks.update({"_id": ObjectId(task_id)}, submit)
+        mongo.db.tasks.update_one(update)({"_id": ObjectId(task_id)}, submit)
         flash("Task Successfully Updated")
 
     task = mongo.db.tasks.find_one({"_id": ObjectId(task_id)})
@@ -163,7 +161,7 @@ def edit_task(task_id):
 @app.route("/delete_task/<task_id>")
 def delete_task(task_id):
     mongo.db.tasks.remove({"_id": ObjectId(task_id)})
-    flash("Task Successfully Deleted")
+    flash("Successfully Deleted")
     return redirect(url_for("get_tasks"))
 
 
@@ -210,7 +208,7 @@ def delete_category(category_id):
 @app.route("/apply", methods=["GET", "POST"])
 def apply():
         apply = {
-            "task_name" : request.form.get("task_name").lower(),
+            "task_name": request.form.get("task_name").lower(),
             "username": request.form.get("username").lower(),
             "first_name": request.form.get("first_name").lower(),
             "last_name": request.form.get("last_name").lower(),
