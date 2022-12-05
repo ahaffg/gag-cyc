@@ -48,7 +48,7 @@
                     <i class="fas fa-calendar-alt prefix light-blue-text text-darken-4"></i>
                     <input id="due_date" name="due_date" type="text"
                         value="{{ task.due_date }}" class="datepicker validate" required>
-                    <label for="due_date">Due Date</label>
+                    <label for="due_date">Application due date</label>
                 </div>
             </div>
             <!-- is urgent toggle -->
@@ -56,11 +56,11 @@
 				<div class="input-field col s12">
 					<div class="switch">
                         <i class="fas fa-dragon red-text"></i>
-						<label for="is_urgent">
-                            {% if task.is_urgent == "on" %}
-                                <input type="checkbox" id="is_urgent" name="is_urgent" checked>
+						<label for="welsh_essential">
+                            {% if task.welsh_essential == "on" %}
+                                <input type="checkbox" id="welsh_essential" name="welsh_essential" checked>
                             {% else %}
-                                <input type="checkbox" id="is_urgent" name="is_urgent">
+                                <input type="checkbox" id="welsh_essential" name="welsh_essential">
                             {% endif %}
                             <span class="lever"></span>
                             Welsh essential?
