@@ -44,7 +44,7 @@
               <a class="white-text" href="{{ url_for('profile', username=session['user']) }}">Profile
               </a>
             </li>
-            {% if session.user|lower == "admin"|lower %}
+            {% if session.user|lower == "angharad"|lower %}
             <li>
               <a class="white-text" href="{{ url_for('add_task') }}">New Task
               </a>
@@ -90,7 +90,7 @@
           <a class="white-text"  href="{{ url_for('profile', username=session['user']) }}">Profile
           </a>
         </li>
-        {% if session.user|lower == "admin"|lower %}
+        {% if session.user|lower == "angharad"|lower %}
         <li>
           <a class="white-text" href="{{ url_for('add_task') }}">New Task
           </a>
