@@ -1,5 +1,7 @@
 # Gofalu am Geredigion | Caring for Ceredigion
 
+![Mock-Up](/static/images/readmd-images/mock-up.jpg)
+
 ## Milestone Project 3
 
 This website has been created to advertise and support volunteering opportunities in Ceredigion, a rural, coastal county in west Wales.
@@ -9,6 +11,8 @@ Volunteering opportunities are grouped into three categories: animals, environme
 Users to the site will be able to view a board of live opportunities and apply for them via a form. The backend of the website will support the storage of the data they provide (via a database) so that it can be passed on to the institutions or bodies providing the opportunities.
 
 The website will also provide information about former successful candidates to various schemes and will detail their experiences.
+
+The live site can be found [here](https://gag-cyc.herokuapp.com/)
 
 ## Table of contents
 + [UX](#ux "UX")
