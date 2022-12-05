@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" type="text/css">
@@ -10,157 +10,245 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="{{ url_for('static', filename='css/materialize.css') }}" type="text/css" rel="stylesheet" media="screen,projection"/>
     <link href="{{ url_for('static', filename='css/style.css') }}" type="text/css" rel="stylesheet" media="screen,projection"/>
-    
     {% block styles %}
     {% endblock %}
-    <title>Gofalu am Geredigion | Caring for Ceredigion</title>
-</head>
-<body>
+    <title>Gofalu am Geredigion | Caring for Ceredigion
+    </title>
+  </head>
+  <body>
     <header>
-        <!-- top navbar -->
-		<nav class="nav-extended text-shadow">
-			<div class="nav-wrapper">
-				<a href="{{ url_for('get_home') }}" class="brand-logo white-text pad-left">GaG | CfC</a>
-				<a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="fas fa-bars"></i></a>
-				<ul class="right hide-on-med-and-down">
-					<li><a class="white-text" href="{{ url_for('get_home') }}">Home</a></li>
-                    <li><a class="white-text" href="{{ url_for('our_volunteers') }}">Our Volunteers</a></li>
-                    <li><a class="white-text" href="{{ url_for('get_tasks') }}">Opportunities</a></li>
-                    {% if session.user %}
-                        <li><a class="white-text" href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
-                            {% if session.user|lower == "admin"|lower %}
-                            <li><a class="white-text" href="{{ url_for('add_task') }}">New Task</a></li>
-                            <li><a class="white-text" href="{{ url_for('get_categories') }}">Manage Categories</a></li>
-                        {% endif %}
-                        <li><a class="white-text" href="{{ url_for('logout') }}">Log Out</a></li>
-                    {% else %}
-                        <li><a class="white-text" href="{{ url_for('login') }}">Log In</a></li>
-                        <li><a class="white-text" href="{{ url_for('register') }}">Register</a></li>
-                    {% endif %}
-				</ul>
-			</div>
-		</nav>
-
-        <!-- mobile sidenav -->
-		<ul class="sidenav" id="mobile-demo">
-            <li><h4 class="center-align white-text">GaG | CfC</h4></li>
-            <li><a class="white-text" href="{{ url_for('get_home') }}">Home</a></li>
-                    <li><a class="white-text" href="{{ url_for('our_volunteers') }}">Our Volunteers</a></li>
+      <!-- top navbar -->
+      <nav class="nav-extended text-shadow">
+        <div class="nav-wrapper">
+          <a href="{{ url_for('get_home') }}" class="brand-logo white-text pad-left">GaG | CfC
+          </a>
+          <a href="#" data-target="mobile-demo" class="sidenav-trigger right">
+            <i class="fas fa-bars">
+            </i>
+          </a>
+          <ul class="right hide-on-med-and-down">
+            <li>
+              <a class="white-text" href="{{ url_for('get_home') }}">Home
+              </a>
+            </li>
+            <li>
+              <a class="white-text" href="{{ url_for('our_volunteers') }}">Our Volunteers
+              </a>
+            </li>
+            <li>
+              <a class="white-text" href="{{ url_for('get_tasks') }}">Opportunities
+              </a>
+            </li>
             {% if session.user %}
-                <li><a class="white-text"  href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
-                {% if session.user|lower == "admin"|lower %}
-                            <li><a class="white-text" href="{{ url_for('add_task') }}">New Task</a></li>
-                            <li><a class="white-text" href="{{ url_for('get_categories') }}">Manage Categories</a></li>
-                {% endif %}
-                <li><a class="white-text"  href="{{ url_for('logout') }}">Log Out</a></li>
-            {% else %}
-                <li><a class="white-text"  href="{{ url_for('login') }}">Log In</a></li>
-                <li><a class="white-text"  href="{{ url_for('register') }}">Register</a></li>
+            <li>
+              <a class="white-text" href="{{ url_for('profile', username=session['user']) }}">Profile
+              </a>
+            </li>
+            {% if session.user|lower == "admin"|lower %}
+            <li>
+              <a class="white-text" href="{{ url_for('add_task') }}">New Task
+              </a>
+            </li>
+            <li>
+              <a class="white-text" href="{{ url_for('get_categories') }}">Manage Categories
+              </a>
+            </li>
             {% endif %}
-		</ul>
-	</header>
-<!-- banner-hero image-->
-  <div id="index-banner" class="parallax-container">
-    <div class="section no-pad-bot">
-      <div class="container">
-        <br><br>
-        <h1 class="header text-shadow center white-text heavy">Gofalu am Geredigion<br><hr>
-            Caring for Ceredigion</h1>
-        <div class="row center">
-            <h5 class="header text-shadow col s12 white-text">Your hub for volunteering opportunities in Ceredigion.</h5>
+            <li>
+              <a class="white-text" href="{{ url_for('logout') }}">Log Out
+              </a>
+            </li>
+            {% else %}
+            <li>
+              <a class="white-text" href="{{ url_for('login') }}">Log In
+              </a>
+            </li>
+            <li>
+              <a class="white-text" href="{{ url_for('register') }}">Register
+              </a>
+            </li>
+            {% endif %}
+          </ul>
         </div>
-        <div class="row center">
-          <img id="gag-logo" src="{{ url_for('static', filename='images/GagLogoBach.png') }}" alt="gag-logo">
+      </nav>
+      <!-- mobile sidenav -->
+      <ul class="sidenav" id="mobile-demo">
+        <li>
+          <h4 class="center-align white-text">GaG | CfC
+          </h4>
+        </li>
+        <li>
+          <a class="white-text" href="{{ url_for('get_home') }}">Home
+          </a>
+        </li>
+        <li>
+          <a class="white-text" href="{{ url_for('our_volunteers') }}">Our Volunteers
+          </a>
+        </li>
+        {% if session.user %}
+        <li>
+          <a class="white-text"  href="{{ url_for('profile', username=session['user']) }}">Profile
+          </a>
+        </li>
+        {% if session.user|lower == "admin"|lower %}
+        <li>
+          <a class="white-text" href="{{ url_for('add_task') }}">New Task
+          </a>
+        </li>
+        <li>
+          <a class="white-text" href="{{ url_for('get_categories') }}">Manage Categories
+          </a>
+        </li>
+        {% endif %}
+        <li>
+          <a class="white-text"  href="{{ url_for('logout') }}">Log Out
+          </a>
+        </li>
+        {% else %}
+        <li>
+          <a class="white-text"  href="{{ url_for('login') }}">Log In
+          </a>
+        </li>
+        <li>
+          <a class="white-text"  href="{{ url_for('register') }}">Register
+          </a>
+        </li>
+        {% endif %}
+      </ul>
+    </header>
+    <!-- banner-hero image-->
+    <div id="index-banner" class="parallax-container">
+      <div class="section no-pad-bot">
+        <div class="container">
+          <br>
+          <br>
+          <h1 class="header text-shadow center white-text heavy">Gofalu am Geredigion
+            <br>
+            <hr>
+            Caring for Ceredigion
+          </h1>
+          <div class="row center">
+            <h5 class="header text-shadow col s12 white-text">Your hub for volunteering opportunities in Ceredigion.
+            </h5>
+          </div>
+          <div class="row center">
+            <img id="gag-logo" src="{{ url_for('static', filename='images/GagLogoBach.png') }}" alt="caring for ceredigion heart logo">
+          </div>
+          <br>
+          <br>
         </div>
-        <br><br>
-
+      </div>
+      <div class="parallax">
+        <img id="hero-image" src="{{ url_for('static', filename='images/coast-path.jpg') }}" alt="cardigan bay coastline">
       </div>
     </div>
-    <div class="parallax"><img id="hero-image" src="{{ url_for('static', filename='images/coast-path.jpg') }}" alt="cardigan bay coast"></div>
-  </div>
-
- <!-- flash messages -->
+    <!-- flash messages -->
     <section>
-        {% with messages = get_flashed_messages() %}
-            {% if messages %}
-                {% for message in messages %}
-                    <div class="row flashes">
-                        <h4 class="light-blue lighten-4 center-align">{{ message }}</h4>
-                    </div>
-                {% endfor %}
-            {% endif %}
-        {% endwith %}
+      {% with messages = get_flashed_messages() %}
+      {% if messages %}
+      {% for message in messages %}
+      <div class="row flashes">
+        <h4 class="light-blue lighten-4 center-align">{{ message }}
+        </h4>
+      </div>
+      {% endfor %}
+      {% endif %}
+      {% endwith %}
     </section>
-
-<main class="container">
-        {% block content %}
-        {% endblock %}
-</main>
-
-<!-- footer banner image -->
-      <div class="parallax-container valign-wrapper">
-        <div class="section no-pad-bot">
-          <div class="container">
-            <div class="row center">
-              
-              <h5 id="hub" class="header col s12 white-text bold text-shadow large">Your hub for volunteering opportunities in Ceredigion.</h5>
-            </div>
+    <main class="container">
+      {% block content %}
+      {% endblock %}
+    </main>
+    <!-- footer banner image -->
+    <div class="parallax-container valign-wrapper">
+      <div class="section no-pad-bot">
+        <div class="container">
+          <div class="row center">
+            <h5 id="hub" class="header col s12 white-text bold text-shadow large">Your hub for volunteering opportunities in Ceredigion.
+            </h5>
           </div>
         </div>
-        <div class="parallax"><img src="{{ url_for('static', filename='images/coast-path.jpg') }}" alt="cardigan bay coast"></div>
+      </div>
+      <div class="parallax">
+        <img src="{{ url_for('static', filename='images/coast-path.jpg') }}" alt="cardigan bay coast">
+      </div>
       <hr>
     </div>
-</section>
-
-<!--  Footer-->
-<footer class="page-footer">
+    </section>
+  <!--  Footer-->
+  <footer class="page-footer">
     <div class="container">
       <div class="row">
         <div class="col l6 s12">
-            <h5 class="white-text text-shadow">Croeso | Welcome</h5>
-            <p class="grey-text text-lighten-4 light">We're so glad you're here! This is your online 
-              hub to find out about voluntary opportunities in Ceredigion. Wether you want to 
-              make new friends, give back to the community or build relevant experience for your 
-              CV or field of study, chances are we can match you with an organisation or charity 
-              that would love to hear from you! So take a look around and begin your volunteering 
-              journey today!</p>
+          <h5 class="white-text text-shadow">Croeso | Welcome
+          </h5>
+          <p class="grey-text text-lighten-4 light">We're so glad you're here! This is your online 
+            hub to find out about voluntary opportunities in Ceredigion. Wether you want to 
+            make new friends, give back to the community or build relevant experience for your 
+            CV or field of study, chances are we can match you with an organisation or charity 
+            that would love to hear from you! So take a look around and begin your volunteering 
+            journey today!
+          </p>
         </div>
-
         <div class="col l3 s12">
         </div>
-
         <div class="col l3 s12">
-          <h5 class="white-text">Connect</h5>
+          <h5 class="white-text">Connect
+          </h5>
           <ul>
-            <li><a class="white-text" href="https://en-gb.facebook.com/" alt="external link to our facebook page"><i class="fa-brands fa-facebook">     F a c e b o o k</i></a></li>
-                      <li><a class="white-text light" href="https://www.instagram.com/" alt="external link to our instagram account"><i class="fa-brands fa-instagram">    I n s t a g r a m</i></a></li>
-                      <li><a class="white-text light" href="https://twitter.com/" alt="external link to our twitter account"><i class="fa-brands fa-twitter">      T w i t t e r</i></a></li>
-                      <li><a class="white-text light" href="https://www.tiktok.com/" alt="external link to our tiktok account"><i class="fa-brands fa-tiktok">       T i k T o k</i></a></li>
+            <li>
+              <a class="white-text" href="https://en-gb.facebook.com/" alt="external link to our facebook page">
+                <i class="fa-brands fa-facebook">     F a c e b o o k
+                </i>
+              </a>
+            </li>
+            <li>
+              <a class="white-text light" href="https://www.instagram.com/" alt="external link to our instagram account">
+                <i class="fa-brands fa-instagram">    I n s t a g r a m
+                </i>
+              </a>
+            </li>
+            <li>
+              <a class="white-text light" href="https://twitter.com/" alt="external link to our twitter account">
+                <i class="fa-brands fa-twitter">      T w i t t e r
+                </i>
+              </a>
+            </li>
+            <li>
+              <a class="white-text light" href="https://www.tiktok.com/" alt="external link to our tiktok account">
+                <i class="fa-brands fa-tiktok">       T i k T o k
+                </i>
+              </a>
+            </li>
           </ul>
         </div>
       </div>
     </div>
     <div class="footer-copyright">
       <div class="container">
-        <p class="copyright text-muted white-text center">Copyright &copy; Gofalu am Geredigion | Caring for Ceredigion <span id="copyright"></span></p>
+        <p class="copyright text-muted white-text center">Copyright &copy; Gofalu am Geredigion | Caring for Ceredigion 
+          <span id="copyright">
+          </span>
+        </p>
       </div>
     </div>
   </footer>
-
-<!--  Scripts-->
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"
-        integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script src="{{ url_for('static', filename='js/materialize.js') }}"></script>
-    <script src="{{ url_for('static', filename='js/init.js') }}"></script>
-    <script src="{{ url_for('static', filename='css/script.js') }}"></script>
-    <script>
-        $("#copyright").text(new Date().getFullYear());
-    </script>
-    {% block scripts %}
-    {% endblock %}
-
-    
-</body>
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+          integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js">
+  </script>
+  <script src="{{ url_for('static', filename='js/materialize.js') }}">
+  </script>
+  <script src="{{ url_for('static', filename='js/init.js') }}">
+  </script>
+  <script src="{{ url_for('static', filename='css/script.js') }}">
+  </script>
+  <script>
+    $("#copyright").text(new Date().getFullYear());
+  </script>
+  {% block scripts %}
+  {% endblock %}
+  </body>
 </html>
-

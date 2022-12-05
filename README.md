@@ -31,7 +31,14 @@ The live site can be found [here](https://gag-cyc.herokuapp.com/)
   + [Experiences Page](#experiences-page "Experiences Page")
   + [Contact Page](#contact-page "Contact Page")
 + [Functionality](#functionality "Functionality")
+  + [Future Implementations](#future-implementations "Future Implementations")
+  + [Accessibility](#accessibility "Accessibility")
 + [Technology](#technology "Technology")
+  + [Languages Used](#languages-used "Languages Used")
+  + [Database Used](#database-used "Database Used")
+  + [Frameworks Used](#frameworks-used "Frameworks Used")
+  + [Libraries & Packages Used](#libraries-&-packages-used "Libraries & Packages Used")
+  + [Programs Used](#programs-used "Programs Used")
 + [Testing](#testing "Testing")
 + [Deployment](#deployment "Deployment")
 + [Credits](#Credits "Credits")
@@ -103,7 +110,51 @@ The contact page will contain a form that will collect user information and stor
 ## Functionality
 In order for the website to work there also needs to be functionality for the users to be able to login and apply for the roles. There will also need to be a sys-admin function that allows for CRUD functionality with the opportunity cards. This functionality will be adapted from the [Code Institute mini project](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+NRDB_L5+2022_Q3/courseware/9e2f12f5584e48acb3c29e9b0d7cc4fe/054c3813e82e4195b5a4d8cd8a99ebaa/).
 
+### Future Implementations
+In future implementations I would like to:
+- Build in bilingual fuunctionality.
+- Add Icons, logos and images to the opportunity cards so that they are more appealing and descriprive to users.
+
+### Accessibility
+I have been mindful during coding to ensure that the website is as accessible friendly as possible. This has been have achieved by:
+- Using semantic HTML.
+- Using descriptive alt attributes on images on the site.
+- Providing information for screen readers where there are icons used and no text.
+- Ensuring that there is a sufficient colour contrast throughout the site.
+
 ## Technology
+### Languages Used
+HTML, CSS, JavaScript, Python
+### Database Used
+
+[MongoDb](https://www.mongodb.com/home) for development.
+
+### Frameworks Used
+
+[Materialize](https://materializecss.com/)- A modern responsive front-end framework based on Material Design
+
+### Libraries & Packages Used
+
+[PyMongo](https://pymongo.readthedocs.io/en/stable/index.html)
+
+[Flask](https://flask.palletsprojects.com/en/2.2.x/)
+
+[Jinja](https://jinja.palletsprojects.com/en/3.1.x/)
+
+[FontAwesome](https://materializecss.com/)
+
+### Programs Used
+
+[Heroku](https://id.heroku.com/login) for deployment
+
+[Git](https://gitpod.io/) - For version control.
+
+[GitHub](https://github.com/) - To save and store the files for this project.
+
+[Google Dev Tools](https://developers.google.com/web/) - To troubleshoot, test features and solve issues with responsiveness and styling.
+
+[Pip](https://pip.pypa.io/en/stable/index.html) - A tool for installing Python packages.
+
 ## Testing
 ## Deployment
 
@@ -116,7 +167,7 @@ Deployment steps
 - Log into Heroku or create a new account and log in
 - top right-hand corner click "New" and choose the option Create new app, if you are a new user, the "Create new app" button will appear in the middle of the screen
 - Write app name - it has to be unique, it cannot be the same as this app
-- hoose Region - I am in Europe
+- Choose Region - I am in Europe
 - Click "Create App"
 - The page of your project opens. 
 - Choose "settings" from the menu on the top of the page
@@ -148,7 +199,7 @@ By forking out of this repository you will be able to view and edit the code wit
 - Click the button in the top right-hand corner "Fork"
 - This will take you to your own repository to a fork that is called the same as the original branch.
 
-###Making a local clone
+### Making a local clone
 
 - Locate the GitHub repository. Link can be found [here](https://github.com/ahaffg/gag-cyc).
 - Next to the green Gitpod button you will see a button "code" with an arrow pointing down
