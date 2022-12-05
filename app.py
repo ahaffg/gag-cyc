@@ -156,7 +156,7 @@ def edit_task(task_id):
 
     task = mongo.db.tasks.find_one({"_id": ObjectId(task_id)})
     categories = mongo.db.categories.find().sort("category_name", 1)
-    return render_template("get_tasks", task=task, categories=categories)
+    return render_template("edit_task.html", task=task, categories=categories)
 
 
 @app.route("/delete_task/<task_id>")

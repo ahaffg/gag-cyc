@@ -1,15 +1,16 @@
 {% extends "base.html" %}
 {% block content %}
 
-    <h3 class="light-blue-text text-darken-4 center-align">All Tasks</h3>
+    <h3 class="white-text text-shadow center-align">All Opportunities</h3>
 
+            <!-- colapsable template-->
+            <!-- colapsable header-->
     <ul class="collapsible">
         {% for task in tasks %}
         <li>
             <div class="collapsible-header white-text light-blue darken-4 text-shadow">
                 <div class="col s3">
-                    <i class="fas fa-caret-down"></i>
-                    
+                    <i class="fas fa-caret-down"></i>  
                 </div>
                 <div class="col s9">
                     <strong>{{ task.category_name }}</strong>
@@ -20,8 +21,11 @@
                     {% endif %}
                 </div>
             </div>
+            <!-- drop-down-->
+            <!-- description-->
             <div class="collapsible-body">
                 <p>{{ task.task_description }}</p>
+            <!-- admin buttons-->
                 {% if session.user %}
                         <a href="{{ url_for('get_apply', task_id=task._id) }}" class="btn-small lime darken-3">Apply</a> 
                         <a href="{{ url_for('delete_task', task_id=task._id) }}" class="btn-small red">Delete</a>

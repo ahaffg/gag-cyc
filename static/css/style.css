@@ -131,6 +131,6 @@ hr {
     line-height: 42px;
 }
 
-.flashes{
-  color: white;
+.collapsible-body {
+  background-color:white;
 }

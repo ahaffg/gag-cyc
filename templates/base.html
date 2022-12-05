@@ -28,8 +28,8 @@
                     <li><a class="white-text" href="{{ url_for('get_tasks') }}">Opportunities</a></li>
                     {% if session.user %}
                         <li><a class="white-text" href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
-                        <li><a class="white-text" href="{{ url_for('add_task') }}">New Task</a></li>
-                        {% if session.user|lower == "admin"|lower %}
+                            {% if session.user|lower == "admin"|lower %}
+                            <li><a class="white-text" href="{{ url_for('add_task') }}">New Task</a></li>
                             <li><a class="white-text" href="{{ url_for('get_categories') }}">Manage Categories</a></li>
                         {% endif %}
                         <li><a class="white-text" href="{{ url_for('logout') }}">Log Out</a></li>
@@ -43,14 +43,14 @@
 
         <!-- mobile sidenav -->
 		<ul class="sidenav" id="mobile-demo">
-            <li><h4 class="center-align white-text">Task Manager</h4></li>
+            <li><h4 class="center-align white-text">GaG | CfC</h4></li>
             <li><a class="white-text" href="{{ url_for('get_home') }}">Home</a></li>
                     <li><a class="white-text" href="{{ url_for('our_volunteers') }}">Our Volunteers</a></li>
             {% if session.user %}
                 <li><a class="white-text"  href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
-                <li><a class="white-text"  href="{{ url_for('add_task') }}">New Task</a></li>
                 {% if session.user|lower == "admin"|lower %}
-                    <li><a class="white-text"  href="{{ url_for('get_categories') }}">Manage Categories</a></li>
+                            <li><a class="white-text" href="{{ url_for('add_task') }}">New Task</a></li>
+                            <li><a class="white-text" href="{{ url_for('get_categories') }}">Manage Categories</a></li>
                 {% endif %}
                 <li><a class="white-text"  href="{{ url_for('logout') }}">Log Out</a></li>
             {% else %}
@@ -117,19 +117,18 @@
     <div class="container">
       <div class="row">
         <div class="col l6 s12">
-            <h5 class="white-text">Croeso | Welcome</h5>
+            <h5 class="white-text text-shadow">Croeso | Welcome</h5>
             <p class="grey-text text-lighten-4 light">We're so glad you're here! This is your online 
               hub to find out about voluntary opportunities in Ceredigion. Wether you want to 
               make new friends, give back to the community or build relevant experience for your 
               CV or field of study, chances are we can match you with an organisation or charity 
               that would love to hear from you! So take a look around and begin your volunteering 
               journey today!</p>
-
-
         </div>
+
         <div class="col l3 s12">
-          
         </div>
+
         <div class="col l3 s12">
           <h5 class="white-text">Connect</h5>
           <ul>
