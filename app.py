@@ -150,7 +150,7 @@ def edit_task(task_id):
             "is_urgent": is_urgent,
             "due_date": request.form.get("due_date")
         }
-        mongo.db.tasks.update({"_id": ObjectId(task_id)}, submit)
+        mongo.db.tasks.update_one({"_id": ObjectId(task_id)},{'$set': submit})
         flash("Task Successfully Updated")
 
     task = mongo.db.tasks.find_one({"_id": ObjectId(task_id)})
@@ -190,7 +190,7 @@ def edit_category(category_id):
         submit = {
             "category_name": request.form.get("category_name")
         }
-        mongo.db.categories.update({"_id": ObjectId(category_id)}, submit)
+        mongo.db.categories.update_one({"_id": ObjectId(category_id)},{'$set': submit})
         flash("Category Successfully Updated")
         return redirect(url_for("get_categories"))
 
