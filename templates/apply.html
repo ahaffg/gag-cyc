@@ -29,32 +29,31 @@
                     <form class="col s12">
                       <div class="row">
                         <div class="input-field col s6">
-                          <input  id="first_name" type="text" class="validate">
+                          <input  id="first_name" name="first_name" type="text" class="validate" required>
                           <label for="first_name">First Name</label>
                         </div>
                         <div class="input-field col s6">
-                          <input id="last_name" type="text" class="validate">
+                          <input id="last_name" name="last_name" type="text" class="validate"required>
                           <label for="last_name">Last Name</label>
                         </div>
                     </div>
                       <div class="row">
                         <div class="input-field col s12">
-                          <input id="email" type="email" class="validate">
+                          <input id="email" name="email" type="email" class="validate" required>
                           <label for="email">Email</label>
                         </div>
                       </div>
                       <div class="row">
                 <!-- text area -->
-                <form class="col s12">
                   <div class="row">
                     <div class="input-field col s12">
-                      <textarea placeholder="Placeholder" id="textarea1" class="materialize-textarea" class="validate" minlength="5"
-                      maxlength="500"></textarea>
+                      <textarea id="description" name="description" type="description" class="materialize-textarea" class="validate" minlength="5"
+                      maxlength="500" required></textarea>
                       <label for="textarea1">Please give a brief description why you are applying:</label>
                     </div>
                   </div>
-                </form>
               </div>
+            
               <!-- submit button -->
             <div class="row">
               <div class="col s12 center-align">
@@ -62,7 +61,15 @@
                       Apply <i class="fas fa-plus-square right"></i>
                   </button>
               </div>
-          </div>
+            </div>
+            <!-- cancel button -->
+            <div class="row">
+              <div class="col s12 center-align">
+                  <a href="{{ url_for('get_tasks') }}"></a><button type="cancel" class="btn-large light-blue lighten-1 text-shadow">
+                    Cancel<i class="fas fa-xmark right"></a></i>
+                  </button>
+              </div>
+            </div>
                     </form>
                   </div>
             </div>
@@ -71,3 +78,6 @@
     </div>
 
 {% endblock %}
+
+
+<a href="{{ url_for('edit_task', task_id=task._id) }}" class="btn-small light-blue lighten-1">Edit</a>

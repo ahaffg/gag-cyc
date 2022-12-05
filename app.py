@@ -207,17 +207,17 @@ def delete_category(category_id):
 
 @app.route("/apply", methods=["GET", "POST"])
 def apply():
-        apply = {
-            "task_name": request.form.get("task_name").lower(),
-            "username": request.form.get("username").lower(),
-            "first_name": request.form.get("first_name").lower(),
-            "last_name": request.form.get("last_name").lower(),
-            "description": request.form.get("description").lower()
-        }
-        mongo.db.apply.insert_one(apply)
-
-        flash("Thank you, we have recieved your application and will be in contact shortly!")
-        return render_template("home.html")
+    apply = {
+        "task_name": request.form.get("task_name").lower(),
+        "username": request.form.get("username").lower(),
+        "first_name": request.form.get("first_name").lower(),
+        "last_name": request.form.get("last_name").lower(),
+        "description": request.form.get("description").lower()
+    }
+    mongo.db.apply.insert_one(apply)
+    
+    flash("Thank you, we have recieved your application and will be in contact shortly!")
+    return render_template("home.html")
 
 
 if __name__ == "__main__":
