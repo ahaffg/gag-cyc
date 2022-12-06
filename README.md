@@ -114,6 +114,7 @@ In order for the website to work there also needs to be functionality for the us
 In future implementations I would like to:
 - Build in bilingual fuunctionality.
 - Add Icons, logos and images to the opportunity cards so that they are more appealing and descriprive to users.
+- Incorperate more defensive programming to prevent things being deleted accidentaly.
 
 ### Accessibility
 I have been mindful during coding to ensure that the website is as accessible friendly as possible. This has been have achieved by:
