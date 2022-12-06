@@ -78,39 +78,39 @@
           </h4>
         </li>
         <li>
-          <a class="white-text" href="{{ url_for('get_home') }}">Home
+          <a href="{{ url_for('get_home') }}">Home
           </a>
         </li>
         <li>
-          <a class="white-text" href="{{ url_for('our_volunteers') }}">Our Volunteers
+          <a href="{{ url_for('our_volunteers') }}">Our Volunteers
           </a>
         </li>
         {% if session.user %}
         <li>
-          <a class="white-text"  href="{{ url_for('profile', username=session['user']) }}">Profile
+          <a  href="{{ url_for('profile', username=session['user']) }}">Profile
           </a>
         </li>
         {% if session.user|lower == "angharad"|lower %}
         <li>
-          <a class="white-text" href="{{ url_for('add_task') }}">New Task
+          <a href="{{ url_for('add_task') }}">New Task
           </a>
         </li>
         <li>
-          <a class="white-text" href="{{ url_for('get_categories') }}">Manage Categories
+          <a href="{{ url_for('get_categories') }}">Manage Categories
           </a>
         </li>
         {% endif %}
         <li>
-          <a class="white-text"  href="{{ url_for('logout') }}">Log Out
+          <a href="{{ url_for('logout') }}">Log Out
           </a>
         </li>
         {% else %}
         <li>
-          <a class="white-text"  href="{{ url_for('login') }}">Log In
+          <a href="{{ url_for('login') }}">Log In
           </a>
         </li>
         <li>
-          <a class="white-text"  href="{{ url_for('register') }}">Register
+          <a href="{{ url_for('register') }}">Register
           </a>
         </li>
         {% endif %}
