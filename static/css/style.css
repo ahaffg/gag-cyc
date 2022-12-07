@@ -11,10 +11,14 @@ nav{
    color: #444;
  }
 
-
+ h1 {
+  color:#04294b;
+  font-weight: bolder;
+ }
 
  h2 {
   color:#04294b;
+  font-weight: bolder;
  }
 
  h3 {
@@ -37,31 +41,15 @@ h5 {
   color: #04294b;
 }
 
-#hero-image .container {
-  animation-name: hero-zoom;
-  animation-duration: 5s;
-  animation-fill-mode: forwards;
-}
-
-@keyframes hero-zoom {
-  from {
-      transform: scale(1);
-  }
-
-  to {
-      transform: scale(1.1);
-  }
-}
-
 hr {
   color:white;
 }
 
- p {
+p {
    line-height: 2rem;
    font-size:1.5rem;
    color:#04294b;
- }
+}
  
  .card-content p {
   font-size:1rem;
@@ -133,8 +121,4 @@ hr {
 
 .collapsible-body {
   background-color:white;
-}
-
-.collapsible-header{
-  background-color:#04294b;
 }

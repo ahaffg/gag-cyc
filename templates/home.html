@@ -3,74 +3,77 @@
 
 <!-- welcome message -->
 <div class="container">
-    <div class="section">
-        <div class="row">
-            <div class="col s12 center">
-                <h3><i class="mdi-content-send"></i></h3>
-                <h4 class="white-text text-shadow">Croeso | Welcome</h4>
-                <p class="left-align light">We're so glad you're here! This is your online hub to find out about 
-                    voluntary opportunities in Ceredigion. Wether you want to make new friends, give back to the 
-                    community or build relevant experience for your CV or field of study, chances are we can 
-                    match you with an organisation or charity that would love to hear from you! So take a look 
-                    around and begin your volunteering journey today!</p>
-            </div>
-        </div>
+  <div class="section">
+    <div class="row">
+      <div class="col s12 center">
+        <h3><i class="mdi-content-send"></i></h3>
+        <h4 class="text-shadow">Croeso | Welcome</h4>
+        <p class="left-align heavy">We're so glad you're here! This is your online hub to find out about
+          voluntary opportunities in Ceredigion. Wether you want to make new friends, give back to the
+          community or build relevant experience for your CV or field of study, chances are we can
+          match you with an organisation or charity that would love to hear from you! So take a look
+          around and begin your volunteering journey today!</p>
+      </div>
     </div>
+  </div>
 </div>
 <hr>
 <!--   Icon Section   -->
 <section>
-    <div class="container">
-        <div class="section">
-          <div class="row">
-            <div class="col s12 m4">
-              <div class="icon-block">
-                <h2 class="center blue-text darken-4"><i class="fa-solid fa-seedling"></i></h2>
-                <h5 class="white-text text-shadow center">Environment</h5>
-    
-                <p class="light">Do you care deeply about the environment? Would you 
-                    like to keep the local area safe and accesable for the comminuity 
-                    and wildlife? If so, we've teamed up with local organisations 
-                    like Tir Coed, Surfers Against Sewage and Eco Soc and have many 
-                    rewarding opportunities available for all ages and levels of 
-                    ability, click below to see out latest opportunities.</p>
-              </div>
-              <a href="{{ url_for('get_tasks') }}" class="waves-effect waves-light lime darken-3 btn"><i class="fa-solid fa-seedling"></i>Environment</a>
-            </div>
-    
-            <div class="col s12 m4">
-              <div class="icon-block">
-                <h2 class="center blue-text darken-4"><i class="fa-solid fa-person-breastfeeding"></i></h2>
-                <h5 class="center white-text text-shadow">People</h5>
-    
-                <p class="light">Are you just good with people? Do you always seem to 
-                    calm people or make them smile? Then organisations like Hafan Y Waun, 
-                    Mudiad Meithrin and Mind would love to hear from you! No matter 
-                    what your skills or specialities, theres bound to be an oppertunity 
-                    where you can make a difference. Click below to see what will 
-                    be a good fit for you! </p>
-              </div>
-              <a href="{{ url_for('get_tasks') }}" class="waves-effect waves-light lime darken-3 btn"><i class="fa-solid fa-person-breastfeeding"></i>People</a>
-            </div>
-    
-            <div class="col s12 m4">
-              <div class="icon-block">
-                <h2 class="center blue-text darken-4"><i class="fa-solid fa-paw"></i></h2>
-                <h5 class="center white-text text-shadow">Animals</h5>
-    
-                <p class="light">Do you consider yourself a Dr Dolittle? Do you have an 
-                  affinity with animals? Charities like Cats Protection League, Ystwyth 
-                  Vets and RSPA Ceredigion branch are in need of kind, patient and reliable 
-                  volunteers to help them with the animals in their care. If  you can help, 
-                  check out out opportunities by clicking the button below</p>
-              </div>
-              <a href="{{ url_for('get_tasks') }}" class="waves-effect waves-light lime darken-3 btn"><i class="fa-solid fa-paw"></i>Animals</a>
-            </div>
+  <div class="container">
+    <div class="section">
+      <div class="row">
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center blue-text darken-4"><i class="fa-solid fa-seedling"></i></h2>
+            <h5 class="white-text text-shadow center heavy">Environment</h5>
+
+            <p class="heavy">Do you care deeply about the environment? Would you
+              like to keep the local area safe and accesable for the comminuity
+              and wildlife? If so, we've teamed up with local organisations
+              like Tir Coed, Surfers Against Sewage and Eco Soc and have many
+              rewarding opportunities available for all ages and levels of
+              ability, click below to see out latest opportunities.</p>
           </div>
+          <a href="{{ url_for('get_tasks') }}" class="waves-effect waves-light lime darken-3 btn"><i
+              class="fa-solid fa-seedling"></i>Environment</a>
+        </div>
+
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center blue-text darken-4"><i class="fa-solid fa-person-breastfeeding"></i></h2>
+            <h5 class="center white-text text-shadow heavy">People</h5>
+
+            <p class="heavy">Are you good with people? Do you always seem to be able to
+              calm people or make them smile? Then organisations like Hafan Y Waun,
+              Mudiad Meithrin and Mind would love to hear from you! No matter
+              what your skills or specialities, there is bound to be an oppertunity
+              where you can make a difference. Click below to see what will
+              be a good fit for you! </p>
+          </div>
+          <a href="{{ url_for('get_tasks') }}" class="waves-effect waves-light lime darken-3 btn"><i
+              class="fa-solid fa-person-breastfeeding"></i>People</a>
+        </div>
+
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center blue-text darken-4"><i class="fa-solid fa-paw"></i></h2>
+            <h5 class="center white-text text-shadow heavy">Animals</h5>
+
+            <p class="heavy">Do you consider yourself a Dr Dolittle? Do you have an
+              affinity with animals? Charities like Cats Protection League, Ystwyth
+              Vets and RSPA Ceredigion branch are in need of kind, patient and reliable
+              volunteers to help them with the animals in their care. If you can help,
+              check out out opportunities by clicking the button below</p>
+          </div>
+          <a href="{{ url_for('get_tasks') }}" class="waves-effect waves-light lime darken-3 btn"><i
+              class="fa-solid fa-paw"></i>Animals</a>
         </div>
       </div>
-      <hr>
-      <br>
-      <br>
+    </div>
+  </div>
+  <hr>
+  <br>
+  <br>
 
-{% endblock %}
+  {% endblock %}

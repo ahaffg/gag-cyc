@@ -1,106 +1,118 @@
 {% extends "base.html" %}
 {% block content %}
-<!-- title--> 
+<!-- title-->
 <div class="container">
-    <div class="section">
-        <div class="row">
-            <div class="col s12 center">
-                <h3><i class="mdi-content-send blue-text darken-4"></i></h3>
-                <h4 class="white-text text-shadow">Our Volunteers</h4>
-                <p class="left-align light">We've been so lucky to work with some 
-                    amazing people who havegiven their time to worthwhile causes in 
-                    the area. Come and meet some of them and get inspired to start 
-                    your own volunteering journey.</p>
-            </div>
-        </div>
+  <div class="section">
+    <div class="row">
+      <div class="col s12 center">
+        <h3><i class="mdi-content-send blue-text darken-4"></i></h3>
+        <h4 class="heavytext-shadow">Our Volunteers</h4>
+        <p class="left-align heavy">We've been so lucky to work with some
+          amazing people who havegiven their time to worthwhile causes in
+          the area. Come and meet some of them and get inspired to start
+          your own volunteering journey.</p>
+      </div>
     </div>
+  </div>
 </div>
 
 <!-- cards-->
 <div class="col s6 m7">
-    <div class="card">
+  <div class="card">
     <div class="card-image">
       <img src="{{ url_for('static', filename='images/pexels-anna-shvets-5029860.jpg') }}">
     </div>
     <div class="card-stacked">
       <div class="card-content">
-          <h5 class="header right-align"><em>Mair and The Clean Crew</em></h5>
-          <p>I found myself at a loss after retirement. Knitting and reading Mills and Boon just 
-            was not for me. Having been active all my life (I played netball for the county as a 
-            youngster and ran several clubs throughout the years) I did not want to spend the rest 
-            of my days sitting in an armchair! The clean crew have given me a new drive and I have
-            enjoyed meeting people of all ages and from all walks of life. I have made friends and 
-            I am helping to keep our wonderful town beautiful, seems like a great deal to me!</p>
-        </div>
-        <div class="card-action">
-          <a href="{{ url_for('get_tasks') }}"><h5><i class="fa-solid fa-seedling"></i> Inspired? <i class="fa-solid fa-person-breastfeeding"></i> View and apply for volunteering opportunities here <i class="fa-solid fa-paw"></i></h5></a>
-        </div>
+        <h5 class="header right-align"><em>Mair and The Clean Crew</em></h5>
+        <p class="heavy">I found myself at a loss after retirement. Knitting and reading Mills and Boon just
+          was not for me. Having been active all my life (I played netball for the county as a
+          youngster and ran several clubs throughout the years) I did not want to spend the rest
+          of my days sitting in an armchair! The clean crew have given me a new drive and I have
+          enjoyed meeting people of all ages and from all walks of life. I have made friends and
+          I am helping to keep our wonderful town beautiful, seems like a great deal to me!</p>
+      </div>
+      <div class="card-action">
+        <a href="{{ url_for('get_tasks') }}">
+          <h5><i class="fa-solid fa-seedling"></i> Inspired? <i class="fa-solid fa-person-breastfeeding"></i> View and
+            apply for volunteering opportunities here <i class="fa-solid fa-paw"></i></h5>
+        </a>
       </div>
     </div>
   </div>
 </div>
-  <br>
+</div>
+<br>
 <div class="col s6 m7">
-      <div class="card">
-      <div class="card-image">
-        <img src="{{ url_for('static', filename='images/pexels-kampus-production-7551617.jpg') }}">
+  <div class="card">
+    <div class="card-image">
+      <img src="{{ url_for('static', filename='images/pexels-kampus-production-7551617.jpg') }}">
+    </div>
+    <div class="card-stacked">
+      <div class="card-content">
+        <h5 class="header right-align"><em>Nico and Joanna</em></h5>
+        <p class="heavy">We are both second year Computer Science students at Aberystwyth University.
+          We love the area and wanted to get to know the community beyond the campus.
+          We saw the advert posted by Hafan Y Waun that was looking for people to provide
+          simple tech lessons for the elderly. We've loved our time here! One of our
+          favourite residents is Joe who we've taught basic iPad use so he can enjoy his
+          favourite books and read to his grandchildren via skype. We thoroughly
+          recommend undertaking a volunteering opportunity, especially as cups of
+          tea are provided!</p>
       </div>
-      <div class="card-stacked">
-        <div class="card-content">
-            <h5 class="header right-align"><em>Nico and Joanna</em></h5>
-          <p>We are both second year Computer Science students at Aberystwyth University. 
-            We love the area and wanted to get to know the community beyond the campus. 
-            We saw the advert posted by Hafan Y Waun that was looking for people to provide 
-            simple tech lessons for the elderly. We've loved our time here! One of our 
-            favourite residents is Joe who we've taught basic iPad use so he can enjoy his 
-            favourite books and read to his grandchildren via skype. We thoroughly 
-            recommend undertaking a volunteering opportunity, especially as cups of 
-            tea are provided!</p>
-        </div>
-        <div class="card-action">
-          <a href="{{ url_for('get_tasks') }}"><h5><i class="fa-solid fa-seedling"></i> Inspired? <i class="fa-solid fa-person-breastfeeding"></i> View and apply for volunteering opportunities here <i class="fa-solid fa-paw"></i></h5></a>
-        </div>
+      <div class="card-action">
+        <a href="{{ url_for('get_tasks') }}">
+          <h5><i class="fa-solid fa-seedling"></i> Inspired? <i class="fa-solid fa-person-breastfeeding"></i> View and
+            apply for volunteering opportunities here <i class="fa-solid fa-paw"></i></h5>
+        </a>
       </div>
     </div>
   </div>
-  <br>
+</div>
+<br>
 <div class="col s6 m7"></div>
-  <div class="card">
-    <div class="card-image">
-      <img src="{{ url_for('static', filename='images/pexels-ksenia-chernaya-8535214.jpg') }}">
-    </div>
-    <div class="card-stacked">
-      <div class="card-content">
-          <h5 class="header right-align"><em>Sara</em></h5>
-          <p>I am about to finish my art degree this year and I will begin a PGCE in 
-            September. I thought it would be a good idea to get some experience working with young 
-            children, so I've been holding art classes at Mudiad Meithrin for the past month. Its 
-            been very rewarding and its really helped me as I now have expreience and references 
-            I can add to my CV.</p>
-        </div>
-        <div class="card-action">
-          <a href="{{ url_for('get_tasks') }}"><h5><i class="fa-solid fa-seedling"></i> Inspired? <i class="fa-solid fa-person-breastfeeding"></i> View and apply for volunteering opportunities here <i class="fa-solid fa-paw"></i></h5></a>        </div>
-      </div>
-    </div>
+<div class="card">
+  <div class="card-image">
+    <img src="{{ url_for('static', filename='images/pexels-ksenia-chernaya-8535214.jpg') }}">
   </div>
-  <br>
-  <div class="col s6 m7"></div>
-  <div class="card">
-    <div class="card-image">
-      <img src="{{ url_for('static', filename='images/pexels-cottonbro-studio-6568946.jpg') }}">
+  <div class="card-stacked">
+    <div class="card-content">
+      <h5 class="header right-align"><em>Sara</em></h5>
+      <p class="heavy">I am about to finish my art degree this year and I will begin a PGCE in
+        September. I thought it would be a good idea to get some experience working with young
+        children, so I've been holding art classes at Mudiad Meithrin for the past month. Its
+        been very rewarding and its really helped me as I now have expreience and references
+        I can add to my CV.</p>
     </div>
-    <div class="card-stacked">
-      <div class="card-content">
-          <h5 class="header right-align"><em>Anya (and Dash!)</em></h5>
-          <p>I've been volunteering at the local RSPCA shelter since the begining of my AS levels. 
-            I really want to get into a good university to study veterinary medicine. The work I 
-            do here also counts towards my Duke of Edinburgh Award. I love dogs, and Dash and I 
-            are besties now!</p>
-        </div>
-        <div class="card-action">
-          <a href="{{ url_for('get_tasks') }}"><h5><i class="fa-solid fa-seedling"></i> Inspired? <i class="fa-solid fa-person-breastfeeding"></i> View and apply for volunteering opportunities here <i class="fa-solid fa-paw"></i></h5></a>        </div>
-      </div>
-    </div>
+    <div class="card-action">
+      <a href="{{ url_for('get_tasks') }}">
+        <h5><i class="fa-solid fa-seedling"></i> Inspired? <i class="fa-solid fa-person-breastfeeding"></i> View and
+          apply for volunteering opportunities here <i class="fa-solid fa-paw"></i></h5>
+      </a> </div>
   </div>
-  <br>
-  {% endblock %}
+</div>
+</div>
+<br>
+<div class="col s6 m7"></div>
+<div class="card">
+  <div class="card-image">
+    <img src="{{ url_for('static', filename='images/pexels-cottonbro-studio-6568946.jpg') }}">
+  </div>
+  <div class="card-stacked">
+    <div class="card-content">
+      <h5 class="header right-align"><em>Anya (and Dash!)</em></h5>
+      <p class="heavy">I've been volunteering at the local RSPCA shelter since the begining of my AS levels.
+        I really want to get into a good university to study veterinary medicine. The work I
+        do here also counts towards my Duke of Edinburgh Award. I love dogs, and Dash and I
+        are besties now!</p>
+    </div>
+    <div class="card-action">
+      <a href="{{ url_for('get_tasks') }}">
+        <h5><i class="fa-solid fa-seedling"></i> Inspired? <i class="fa-solid fa-person-breastfeeding"></i> View and
+          apply for volunteering opportunities here <i class="fa-solid fa-paw"></i></h5>
+      </a> </div>
+  </div>
+</div>
+</div>
+<br>
+{% endblock %}
