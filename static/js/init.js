@@ -17,7 +17,7 @@
         showClearBtn: true,
         i18n: {
             done: "Select"
-        }})
+        }});
 
   }); // end of document ready
 })(jQuery); // end of jQuery name space
