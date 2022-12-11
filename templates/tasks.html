@@ -8,13 +8,22 @@
 <ul class="collapsible">
     {% for task in tasks %}
     <li>
-        <div class="collapsible-header #04294b text-shadow">
+        <div class="collapsible-header">
             <div class="col s3">
                 <i class="fas fa-caret-down"></i>
             </div>
-            <div class="col s9">
-                <strong>{{ task.category_name }}</strong>
-                <strong>{{ task.task_name }}</strong> : {{ task.due_date }}
+            <div class="col s9 large">
+                <strong>{% if task.category_name == "Environment" %}
+                <i class="fa-solid fa-seedling"></i>
+                {% elif task.category_name == "People" %}
+                <i class="fa-solid fa-person-breastfeeding"></i>
+                {% elif task.category_name == "Animals" %}
+                <i class="fa-solid fa-paw"></i>
+                {% endif %}
+                
+                {{ task.category_name }}    |</strong>
+                
+                <strong>{{ task.task_name }} : {{ task.due_date }}</strong>
                 {% if task.welsh_essential == "on" %}
                 <i class="fas fa-dragon red-text tooltipped" data-position="right" data-tooltip="Welsh essential"></i>
                 {% endif %}
@@ -24,16 +33,31 @@
         <!-- description-->
         <div class="collapsible-body">
             <p>{{ task.task_description }}</p>
+            <hr>
+            <p class="center heavy">To apply for any of these roles, please <a href="{{ url_for('register') }}">Register
+            </a> or <a href="{{ url_for('login') }}">Log In
+            </a> and complete the application form.</p>
             <!-- admin buttons-->
             {% if session.user %}
             <a href="{{ url_for('get_apply', task_id=task._id) }}" class="btn-small lime darken-3">Apply</a>
-            {% if session.user|lower == "angharad"|lower %}
+            {% elif session.user|lower == "angharad"|lower %}
             <a href="{{ url_for('delete_task', task_id=task._id) }}" class="btn-small red">Delete</a>
             <a href="{{ url_for('edit_task', task_id=task._id) }}" class="btn-small light-blue lighten-1">Edit</a>
             {% endif %}
         </div>
     </li>
+    
     {% endfor %}
 </ul>
-
+<div class="container">
+        <div class="section">
+          <div class="row">
+            <div class="col s12 center">
+            <p class="center heavy">To apply for any of these roles, please <a class="white-text text-shadow" href="{{ url_for('register') }}">Register
+            </a> or <a class="white-text text-shadow" href="{{ url_for('login') }}">Log In
+            </a> and complete the application form.</p>
+            </div>
+          </div>
+        </div>
+      </div>   
 {% endblock %}

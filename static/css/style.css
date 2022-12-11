@@ -115,10 +115,13 @@ p {
 }
 
 .collapsible-header .col strong {
-    margin: 5px;
-    line-height: 42px;
+  color: #04294b;
+  font-size: 2em;
+  margin: 5px;
+  line-height: 42px;
 }
 
 .collapsible-body {
+  font-size: larger;
   background-color:white;
 }
