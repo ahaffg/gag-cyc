@@ -2,7 +2,7 @@
 {% block content %}
 
 <h3 class="text-shadow center-align">All Opportunities</h3>
-
+<br>
 <!-- colapsable template-->
 <!-- colapsable header-->
 <ul class="collapsible">
@@ -14,15 +14,15 @@
             </div>
             <div class="col s9 large">
                 <strong>{% if task.category_name == "Environment" %}
-                <i class="fa-solid fa-seedling"></i>
-                {% elif task.category_name == "People" %}
-                <i class="fa-solid fa-person-breastfeeding"></i>
-                {% elif task.category_name == "Animals" %}
-                <i class="fa-solid fa-paw"></i>
-                {% endif %}
-                
-                {{ task.category_name }}    |</strong>
-                
+                    <i class="fa-solid fa-seedling"></i>
+                    {% elif task.category_name == "People" %}
+                    <i class="fa-solid fa-person-breastfeeding"></i>
+                    {% elif task.category_name == "Animals" %}
+                    <i class="fa-solid fa-paw"></i>
+                    {% endif %}
+
+                    {{ task.category_name }} |</strong>
+
                 <strong>{{ task.task_name }} : {{ task.due_date }}</strong>
                 {% if task.welsh_essential == "on" %}
                 <i class="fas fa-dragon red-text tooltipped" data-position="right" data-tooltip="Welsh essential"></i>
@@ -35,8 +35,8 @@
             <p>{{ task.task_description }}</p>
             <hr>
             <p class="center heavy">To apply for any of these roles, please <a href="{{ url_for('register') }}">Register
-            </a> or <a href="{{ url_for('login') }}">Log In
-            </a> and complete the application form.</p>
+                </a> or <a href="{{ url_for('login') }}">Log In
+                </a> and complete the application form.</p>
             <!-- admin buttons-->
             {% if session.user %}
             <a href="{{ url_for('get_apply', task_id=task._id) }}" class="btn-small lime darken-3">Apply</a>
@@ -46,18 +46,19 @@
             {% endif %}
         </div>
     </li>
-    
+
     {% endfor %}
 </ul>
 <div class="container">
-        <div class="section">
-          <div class="row">
+    <div class="section">
+        <div class="row">
             <div class="col s12 center">
-            <p class="center heavy">To apply for any of these roles, please <a class="white-text text-shadow" href="{{ url_for('register') }}">Register
-            </a> or <a class="white-text text-shadow" href="{{ url_for('login') }}">Log In
-            </a> and complete the application form.</p>
+                <p class="center heavy">To apply for any of these roles, please <a class="white-text text-shadow"
+                        href="{{ url_for('register') }}">Register
+                    </a> or <a class="white-text text-shadow" href="{{ url_for('login') }}">Log In
+                    </a> and complete the application form.</p>
             </div>
-          </div>
         </div>
-      </div>   
+    </div>
+</div>
 {% endblock %}

@@ -35,6 +35,7 @@ def get_tasks():
 def our_volunteers():
     return render_template("our_volunteers.html")
 
+
 @app.route("/get_apply")
 def get_apply():
     return render_template("apply.html")
@@ -83,10 +84,10 @@ def login():
             # ensure hashed password matches user input
             if check_password_hash(
                     existing_user["password"], request.form.get("password")):
-                        session["user"] = request.form.get("username").lower()
-                        flash("Welcome, {}".format(
+                session["user"] = request.form.get("username").lower()
+                flash("Welcome, {}".format(
                             request.form.get("username")))
-                        return redirect(url_for(
+                return redirect(url_for(
                             "profile", username=session["user"]))
             else:
                 # invalid password match
@@ -151,7 +152,7 @@ def edit_task(task_id):
             "welsh_essential": welsh_essential,
             "due_date": request.form.get("due_date")
         }
-        mongo.db.tasks.update_one({"_id": ObjectId(task_id)},{'$set': submit})
+        mongo.db.tasks.update_one({"_id": ObjectId(task_id)}, {'$set': submit})
         flash("Task Successfully Updated")
 
     task = mongo.db.tasks.find_one({"_id": ObjectId(task_id)})
@@ -191,7 +192,8 @@ def edit_category(category_id):
         submit = {
             "category_name": request.form.get("category_name")
         }
-        mongo.db.categories.update_one({"_id": ObjectId(category_id)},{'$set': submit})
+        mongo.db.categories.update_one({"_id": ObjectId(category_id)},
+         {'$set': submit})
         flash("Category Successfully Updated")
         return redirect(url_for("get_categories"))
 
@@ -217,7 +219,7 @@ def apply():
     }
     mongo.db.apply.insert_one(apply)
     
-    flash("Thank you, we have recieved your application and will be in contact shortly!")
+    flash("Thank you, we have recieved your application.")
     return render_template("home.html")
 
 
