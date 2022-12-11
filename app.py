@@ -218,7 +218,7 @@ def apply():
         "description": request.form.get("description").lower()
     }
     mongo.db.apply.insert_one(apply)
-    
+
     flash("Thank you, we have recieved your application.")
     return render_template("home.html")
 
