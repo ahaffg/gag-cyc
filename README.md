@@ -39,6 +39,8 @@ The live site can be found [here](https://gag-cyc.herokuapp.com/)
   + [Libraries & Packages Used](#libraries-&-packages-used "Libraries & Packages Used")
   + [Programs Used](#programs-used "Programs Used")
 + [Testing](#testing "Testing")
+  + [User Stories](#user-stories "User Stories")
+  + [Defensive Programming](#defensive-programming "Defensive Programming")
 + [Deployment](#deployment "Deployment")
 + [Credits](#Credits "Credits")
 
@@ -100,7 +102,7 @@ In order for the website to work there also needs to be functionality for the us
 In future implementations I would like to:
 - Have the apply form autofill the opportunity or tast name and the username fields.
 - Build in bilingual fuunctionality.
-- Add Icons, logos and images to the opportunity cards so that they are more appealing and descriprive to users.
+- Add logos and images to the opportunity cards so that they are more appealing and descriprive to users.
 
 ### Accessibility
 I have been mindful during coding to ensure that the website is as accessible friendly as possible. This has been have achieved by:
@@ -201,6 +203,39 @@ By forking out of this repository you will be able to view and edit the code wit
 - Next to the green Gitpod button you will see a button "code" with an arrow pointing down
 - You are given the option to open with GitHub desktop or download zip
 - You can also copy https full link, go to git bash and write git clone and paste the full link
+
+
+## User Stories
+### Target Audience
+
+The target audience for GaG | CfC are students and retired peoples in the local area. They will want to find a way to contribute to the local community, make friends, or build experience towards jobs or further education courses.
+First Time Visitor Goals
+
+#### As a first time user of the site I want to be able to:
+
+- Understand what the site is for and how to navigate the site.
+- Register for an account.
+- See what other volunteers have gained from their experiences
+
+#### Returning Visitor Goals
+
+As a returning registered user of the site I want to be able to:
+
+- Log in to my account.
+- Apply for opportunities.
+- View roles I have applied for and their application status.(Future Implementation)
+
+#### Admin User
+
+As an administrator for the site I want to be able to:
+
+- Log in to my account.
+- Create, edit, delete and view opportunity categories.
+- Create, edit, delete and view opertunities.
+
+### Defensive Programming
+
+I have used defensive programming through my app to ensure that users who are not logged in, or users who did not create the opportunities or categories are unable to edit. This is achieved by checking whether there is a user in session, and then also checking to see if the session user is the same user who created the opportunity.  I would like to look into this further and if a user is not the creator, a flash message will be displayed to let them know that they are not able to edit/delete opportunities and then redirects them to a suitable page.
 
 ## Credits
 For code inspiration, design inputs, help and advice.
