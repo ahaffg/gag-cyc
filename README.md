@@ -101,7 +101,7 @@ In order for the website to work there also needs to be functionality for the us
 ### Future Implementations
 In future implementations I would like to:
 - Have the apply form autofill the opportunity or tast name and the username fields.
-- Build in bilingual fuunctionality.
+- Build in bilingual functionality.
 - Add logos and images to the opportunity cards so that they are more appealing and descriprive to users.
 
 ### Accessibility
@@ -145,31 +145,94 @@ HTML, CSS, JavaScript, Python
 [Pip](https://pip.pypa.io/en/stable/index.html) - A tool for installing Python packages.
 
 ## Testing
+
 #### HTML Validation
+
 [W3C](https://validator.w3.org/)
+
 ![W3C](/static/images/readmd-images/w3c_validator.jpg)
+
 A couple of errors were noted through the W3C validator, however neither myself, my mentor nor  tutor were able to identify and rectify them, so unfortunately these remain.
+
 #### CSS Validation
+
 [W3C Jigsaw](https://jigsaw.w3.org/css-validator/)
+
 ![Jisgaw](/static/images/readmd-images/jigsaw.jpg)
+
 I am honestly so disapointed there have been so many errors thrown up by the CSS validator. I think even with  limitless time it would be impossible to address them all. I hope that a large ammount are associated with the Materialize code used to create the template for the app, so there is little I can do to address this. However the issues with the links in the head of the dom are really confusing as these are taken from cdnjs.com/(https://cdnjs.com/) so again I would have thought these cannot be altered. I'm not sure what else I can say about this other than the fact that the app seems to work and look the way I would like it to, and that these are issues expected with using external templates.
+
 #### JavaScript Validator
+
 [JS Hint](https://jshint.com/)
+
 ![innit-script](/static/images/readmd-images/innit-jshint.jpg)
+
 ![js-script](/static/images/readmd-images/script-jshint.jpg)
+
 Again, the issues raised by JSHint seem to be related to the code that was imported from Materialize, so not something that is easily addressed. If I had more time I would definately look ate this more closely to see if it was possible to address the issues without having a negative affect on the app.
+
 #### WAVE Validator
+
 [WAVE Web Accessibility Evaluation Tools](https://wave.webaim.org/)
+
 ![Wave](/static/images/readmd-images/wave.jpg)
+
 I've spent a fair ammount of time correcting issues raised by WAVE, which has had a big impact on the overall look of my site. It is not as engaging as I had originally hoped, but accesibility is obviously of paramount importannce, espectially regarting a volunteers website. I wasn't able to locate the one error raised relating to a broken link, nor was the website able to give me more information about it, so unfortunately another bug will have to remain here.
+
 #### Lighthouse
+
 [Lighthouse](https://developer.chrome.com/docs/lighthouse/overview/)
+
 ![Lighthouse](/static/images/readmd-images/lighthouse.jpg)
+
 I'm pretty happy with these scores (especially the accesability element!) Obviously I would neext to keep an eye on these were the app to grow and hold more images, as this would potentially have a negative effect.
+
 #### CI Python Linter
+
 [CI Python Linter](https://pep8ci.herokuapp.com/)
+
 ![Python](/static/images/readmd-images/ci_pythonlinter.jpg)
-In the words of the great and glorious Lizzo: "It's about damn time" !!!
+
+No Errors found. In the words of the great and glorious Lizzo: "It's about damn time" !!!
+
+## User Stories
+### Target Audience
+
+The target audience for GaG | CfC are students and retired peoples in the local area. They will want to find a way to contribute to the local community, make friends, or build experience towards jobs or further education courses.
+First Time Visitor Goals
+
+#### As a first time user of the site I want to be able to:
+
+- Understand what the site is for and how to navigate the site.
+- Register for an account.
+- See what other volunteers have gained from their experiences
+
+#### Returning Visitor Goals
+
+As a returning registered user of the site I want to be able to:
+
+- Log in to my account.
+- Apply for opportunities.
+- View roles I have applied for and their application status.(Future Implementation)
+
+#### Admin User
+
+As an administrator for the site I want to be able to:
+
+- Log in to my account.
+- Create, edit, delete and view opportunity categories.
+- Create, edit, delete and view oportunities.
+
+#### User Journey
+
+![Journey](/static/images/readmd-images/user_journey.jpg)
+
+### Defensive Programming
+
+I have used defensive programming through my app to ensure that users who are not logged in, or users who did not create the opportunities or categories are unable to edit. This is achieved by checking whether there is a user in session, and then also checking to see if the session user is the same user who created the opportunity. Had I more time I would have liked to have developed a custom 404 pages that would direct users back to the home page, should any errors occur whilst they are using the app.
+
+I would also lige to have made use of modals to provide helpful warnings to users to signpost them, if they were trying to do something that their session profile did not support, or if records were to be deleted, would double check that the admin definately wanted to do this.
 
 ## Deployment
 
@@ -221,58 +284,23 @@ By forking out of this repository you will be able to view and edit the code wit
 - You are given the option to open with GitHub desktop or download zip
 - You can also copy https full link, go to git bash and write git clone and paste the full link
 
-
-## User Stories
-### Target Audience
-
-The target audience for GaG | CfC are students and retired peoples in the local area. They will want to find a way to contribute to the local community, make friends, or build experience towards jobs or further education courses.
-First Time Visitor Goals
-
-#### As a first time user of the site I want to be able to:
-
-- Understand what the site is for and how to navigate the site.
-- Register for an account.
-- See what other volunteers have gained from their experiences
-
-#### Returning Visitor Goals
-
-As a returning registered user of the site I want to be able to:
-
-- Log in to my account.
-- Apply for opportunities.
-- View roles I have applied for and their application status.(Future Implementation)
-
-#### Admin User
-
-As an administrator for the site I want to be able to:
-
-- Log in to my account.
-- Create, edit, delete and view opportunity categories.
-- Create, edit, delete and view opertunities.
-
-### Defensive Programming
-
-I have used defensive programming through my app to ensure that users who are not logged in, or users who did not create the opportunities or categories are unable to edit. This is achieved by checking whether there is a user in session, and then also checking to see if the session user is the same user who created the opportunity. Had I more time I would have liked to have developed a custom 404 pages that would direct users back to the home page, should any errors occur whilst they are using the app.
-
-I would also lige to have made use of modals to provide helpful warnings to users to signpost them, if they were trying to do something that their session profile did not support, or if records were to be deleted, would double check that the admin definately wanted to do this.
-
 ## Credits
 For code inspiration, design inputs, help and advice.
 I have consulted numerous websites, individuals and slack channels to get support for the code. I have listed below from where I have adapted code to suit the needs of my app:
 
-[Techsini](https://techsini.com/) was used to create the devide mock-up image at the head of this document.
-[Kera Kudmore](https://github.com/kera-cudmore/seaside-sewing) For a fantactic example of a README.md file.
-[fontawesome](https://fontawesome.com/) For icon use throughout the site as well as adaptation of icons for the site logo.
+- [Techsini](https://techsini.com/) was used to create the devide mock-up image at the head of this document.
+- [Kera Kudmore](https://github.com/kera-cudmore/seaside-sewing) For a fantactic example of a README.md file.
+- [fontawesome](https://fontawesome.com/) For icon use throughout the site as well as adaptation of icons for the site logo.
 
 The many patient and knowledgeable tutors at Code Institute for their time and support.
 
 ### Media
 
-[Cardigan Bay Image](https://www.cardigan-bay.com/)
-[Kampus Production](https://www.pexels.com/photo/a-group-of-people-smiling-together-while-sitting-near-the-table-7551617/)
-[Cottonbro Studio](https://www.pexels.com/photo/a-woman-playing-with-her-dog-6568956/)
-[Anna Shvets](https://www.pexels.com/photo/volunteers-smiling-at-the-camera-while-holding-black-plastic-bags-5029860/)
-[Ksenia Chernaya](https://www.pexels.com/photo/a-woman-teaching-arts-to-preschoolers-8535214/)
+- [Cardigan Bay Image](https://www.cardigan-bay.com/)
+- [Kampus Production](https://www.pexels.com/photo/a-group-of-people-smiling-together-while-sitting-near-the-table-7551617/)
+- [Cottonbro Studio](https://www.pexels.com/photo/a-woman-playing-with-her-dog-6568956/)
+- [Anna Shvets](https://www.pexels.com/photo/volunteers-smiling-at-the-camera-while-holding-black-plastic-bags-5029860/)
+- [Ksenia Chernaya](https://www.pexels.com/photo/a-woman-teaching-arts-to-preschoolers-8535214/)
 
 ## Acknowledgment
 My fantastic mentor [Martina Terlević](https://www.linkedin.com/in/martinaterlevic/?originalSubdomain=de) for always being so helpful and flexible, as well as all round awesome human!
