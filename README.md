@@ -235,7 +235,9 @@ As an administrator for the site I want to be able to:
 
 ### Defensive Programming
 
-I have used defensive programming through my app to ensure that users who are not logged in, or users who did not create the opportunities or categories are unable to edit. This is achieved by checking whether there is a user in session, and then also checking to see if the session user is the same user who created the opportunity.  I would like to look into this further and if a user is not the creator, a flash message will be displayed to let them know that they are not able to edit/delete opportunities and then redirects them to a suitable page.
+I have used defensive programming through my app to ensure that users who are not logged in, or users who did not create the opportunities or categories are unable to edit. This is achieved by checking whether there is a user in session, and then also checking to see if the session user is the same user who created the opportunity. Had I more time I would have liked to have developed a custom 404 pages that would direct users back to the home page, should any errors occur whilst they are using the app.
+
+I would also lige to have made use of modals to provide helpful warnings to users to signpost them, if they were trying to do something that their session profile did not support, or if records were to be deleted, would double check that the admin definately wanted to do this.
 
 ## Credits
 For code inspiration, design inputs, help and advice.
