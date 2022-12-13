@@ -147,12 +147,22 @@ HTML, CSS, JavaScript, Python
 ## Testing
 #### HTML Validation
 [W3C](https://validator.w3.org/)
+![W3C](/static/images/readmd-images/w3c_validator.jpg)
+A couple of errors were noted through the W3C validator, however neither myself, my mentor nor  tutor were able to identify and rectify them, so unfortunately these remain.
 #### CSS Validation
 [W3C Jigsaw](https://jigsaw.w3.org/css-validator/)
+![Jisgaw](/static/images/readmd-images/jigsaw.jpg)
+I am honestly so disapointed there have been so many errors thrown up by the CSS validator. I think even with  limitless time it would be impossible to address them all. I hope that a large ammount are associated with the Materialize code used to create the template for the app, so there is little I can do to address this. However the issues with the links in the head of the dom are really confusing as these are taken from cdnjs.com/(https://cdnjs.com/) so again I would have thought these cannot be altered. I'm not sure what else I can say about this other than the fact that the app seems to work and look the way I would like it to, and that these are issues expected with using external templates.
 #### JavaScript Validator
 [JS Hint](https://jshint.com/)
 ![innit-script](/static/images/readmd-images/innit-jshint.jpg)
 ![js-script](/static/images/readmd-images/script-jshint.jpg)
+Again, the issues raised by JSHint seem to be related to the code that was imported from Materialize, so not something that is easily addressed. If I had more time I would definately look ate this more closely to see if it was possible to address the issues without having a negative affect on the app.
+#### WAVE Validator
+[WAVE Web Accessibility Evaluation Tools](https://wave.webaim.org/)
+![Wave](/static/images/readmd-images/wave.jpg)
+I've spent a fair ammount of time correcting issues raised by WAVE, which has had a big impact on the overall look of my site. It is not as engaging as I had originally hoped, but accesibility is obviously of paramount importannce, espectially regarting a volunteers website. I wasn't able to locate the one error raised relating to a broken link, nor was the website able to give me more information about it, so unfortunately another bug will have to remain here.
+
 
 ## Deployment
 
