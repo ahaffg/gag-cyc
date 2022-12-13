@@ -125,12 +125,12 @@ def logout():
 @app.route("/add_task", methods=["GET", "POST"])
 def add_task():
     if request.method == "POST":
-        welsh_essential = "on" if request.form.get("welsh_essential") else "off"
+        welsh = "on" if request.form.get("welsh") else "off"
         task = {
             "category_name": request.form.get("category_name"),
             "task_name": request.form.get("task_name"),
             "task_description": request.form.get("task_description"),
-            "welsh_essential": welsh_essential,
+            "welsh": welsh,
             "due_date": request.form.get("due_date")
         }
         mongo.db.tasks.insert_one(task)
@@ -144,12 +144,12 @@ def add_task():
 @app.route("/edit_task/<task_id>", methods=["GET", "POST"])
 def edit_task(task_id):
     if request.method == "POST":
-        welsh_essential = "on" if request.form.get("welsh_essential") else "off"
+        welsh = "on" if request.form.get("welsh") else "off"
         submit = {
             "category_name": request.form.get("category_name"),
             "task_name": request.form.get("task_name"),
             "task_description": request.form.get("task_description"),
-            "welsh_essential": welsh_essential,
+            "welsh": welsh,
             "due_date": request.form.get("due_date")
         }
         mongo.db.tasks.update_one({"_id": ObjectId(task_id)}, {'$set': submit})

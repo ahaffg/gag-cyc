@@ -56,11 +56,10 @@
             <div class="input-field col s12">
                 <div class="switch">
                     <i class="fas fa-dragon red-text"></i>
-                    <label for="welsh_essential">
-                        {% if task.welsh_essential == "on" %}
-                        <input type="checkbox" id="welsh_essential" name="welsh_essential" checked>
+                        {% if task.welsh == "on" %}
+                        <input type="checkbox" id="welsh" name="welsh" checked>
                         {% else %}
-                        <input type="checkbox" id="welsh_essential" name="welsh_essential">
+                        <input type="checkbox" id="welsh" name="welsh">
                         {% endif %}
                         <span class="lever"></span>
                         Welsh essential?
@@ -72,10 +71,10 @@
         <div class="row">
             <div class="col s12 center-align">
                 <!-- cancel button -->
-                <a href="{{ url_for('get_tasks') }}" class="btn-large red text-shadow">
+                <a href="{{ url_for('get_tasks') }}" class="btn-large grey-text text-darken-4 red">
                     Cancel <i class="fas fa-times-circle right"></i>
                 </a>
-                <button type="submit" class="btn-large light-blue darken-1 text-shadow">
+                <button type="submit" class="btn-large light-blue grey-text text-darken-4 darken-1">
                     Edit Task <i class="fas fa-edit right"></i>
                 </button>
             </div>

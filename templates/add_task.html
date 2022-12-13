@@ -40,7 +40,7 @@
         <textarea id="task_description" name="task_description" minlength="5"
                   maxlength="200" class="materialize-textarea validate" required>
         </textarea>
-        <label for="task_description">Task Description
+        <label for="task_description">Description
         </label>
       </div>
     </div>
@@ -54,14 +54,14 @@
         </label>
       </div>
     </div>
-    <!-- Welsh essential toggle -->
+    <!-- Welsh toggle -->
     <div class="row">
       <div class="input-field col s12">
         <div class="switch">
           <i class="fas fa-dragon red-text prefix">
           </i>
-          <label for="welsh_essential">
-            <input type="checkbox" id="welsh_essential" name="welsh_essential">
+          <label for="welsh">
+            <input type="checkbox" id="welsh" name="welsh" class="large">
             <span class="lever">
             </span>
             Welsh essential?
@@ -72,7 +72,7 @@
     <!-- submit button -->
     <div class="row">
       <div class="col s12 center-align">
-        <button type="submit" class="btn-large lime darken-3 text-shadow">
+        <button type="submit" class="btn-large grey-text text-darken-4 lime darken-3">
           Add Task 
           <i class="fas fa-plus-square right">
           </i>
@@ -84,7 +84,7 @@
       <div class="col s12 center-align">
         <a href="{{ url_for('get_tasks') }}">
         </a>
-        <button type="cancel" class="btn-large light-blue lighten-1 text-shadow">
+        <button type="cancel" class="btn-large grey-text text-darken-4 light-blue lighten-1">
           Cancel
           <i class="fas fa-xmark right">
             </a>
