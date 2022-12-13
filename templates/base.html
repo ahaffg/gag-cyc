@@ -48,7 +48,7 @@
             <a class="white-text" href="{{ url_for('profile', username=session['user']) }}">Profile
             </a>
           </li>
-          {% if session.user|lower == "angharad"|lower %}
+          {% if session.user|lower == "admin"|lower %}
           <li>
             <a class="white-text" href="{{ url_for('add_task') }}">New Task
             </a>
@@ -77,10 +77,8 @@
     </nav>
     <!-- mobile sidenav -->
     <ul class="sidenav" id="mobile-demo">
-      <li>
-        <h4 class="center-align white-text">GaG | CfC
-        </h4>
-      </li>
+      <h4 class="center-align white-text">GaG | CfC
+      </h4>
       <li>
         <a href="{{ url_for('get_home') }}">Home
         </a>
@@ -94,7 +92,7 @@
         <a href="{{ url_for('profile', username=session['user']) }}">Profile
         </a>
       </li>
-      {% if session.user|lower == "angharad"|lower %}
+      {% if session.user|lower == "admin"|lower %}
       <li>
         <a href="{{ url_for('add_task') }}">New Task
         </a>
@@ -142,7 +140,8 @@
       </div>
     </div>
     <div class="parallax">
-      <img id="hero-image" src="{{ url_for('static', filename='images/coast-path-opac60.jpg') }}" alt="cardigan bay coastline">
+      <img id="hero-image" src="{{ url_for('static', filename='images/coast-path-opac60.jpg') }}"
+        alt="cardigan bay coastline">
     </div>
   </div>
   <!-- flash messages -->
