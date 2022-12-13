@@ -162,7 +162,14 @@ Again, the issues raised by JSHint seem to be related to the code that was impor
 [WAVE Web Accessibility Evaluation Tools](https://wave.webaim.org/)
 ![Wave](/static/images/readmd-images/wave.jpg)
 I've spent a fair ammount of time correcting issues raised by WAVE, which has had a big impact on the overall look of my site. It is not as engaging as I had originally hoped, but accesibility is obviously of paramount importannce, espectially regarting a volunteers website. I wasn't able to locate the one error raised relating to a broken link, nor was the website able to give me more information about it, so unfortunately another bug will have to remain here.
-
+#### Lighthouse
+[Lighthouse](https://developer.chrome.com/docs/lighthouse/overview/)
+![Lighthouse](/static/images/readmd-images/lighthouse.jpg)
+I'm pretty happy with these scores (especially the accesability element!) Obviously I would neext to keep an eye on these were the app to grow and hold more images, as this would potentially have a negative effect.
+#### CI Python Linter
+[CI Python Linter](https://pep8ci.herokuapp.com/)
+![Python](/static/images/readmd-images/ci_pythonlinter.jpg)
+In the words of the great and glorious Lizzo: "It's about damn time" !!!
 
 ## Deployment
 
