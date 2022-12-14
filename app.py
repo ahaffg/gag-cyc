@@ -223,6 +223,25 @@ def apply():
     return render_template("home.html")
 
 
+@app.route("/get_contact")
+def get_contact():
+    return render_template("contact.html")
+
+
+@app.route("/contact", methods=["GET", "POST"])
+def contact():
+    contact = {
+        "first_name": request.form.get("first_name").lower(),
+        "last_name": request.form.get("last_name").lower(),
+        "email": request.form.get("email"),
+        "message": request.form.get("message").lower()
+    }
+    mongo.db.apply.insert_one(document)(messages)
+
+    flash("Thank you, we have recieved your message.")
+    return render_template("home.html")
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),

@@ -43,6 +43,10 @@
             <a class="white-text" href="{{ url_for('get_tasks') }}">Opportunities
             </a>
           </li>
+          <li>
+            <a class="white-text" href="{{ url_for('get_contact') }}">Contact
+            </a>
+          </li>
           {% if session.user %}
           <li>
             <a class="white-text" href="{{ url_for('profile', username=session['user']) }}">Profile
@@ -82,7 +86,15 @@
         </a>
       </li>
       <li>
+        <a class="white-text" href="{{ url_for('get_tasks') }}">Opportunities
+        </a>
+      </li>
+      <li>
         <a href="{{ url_for('our_volunteers') }}">Our Volunteers
+        </a>
+      </li>
+      <li>
+        <a class="white-text" href="{{ url_for('get_contact') }}">Contact
         </a>
       </li>
       {% if session.user %}
