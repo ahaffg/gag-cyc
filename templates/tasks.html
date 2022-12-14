@@ -62,10 +62,39 @@
             {% if session.user|lower == 'admin' %}
             <a href="{{ url_for('edit_task', task_id=task._id) }}"
                 class="btn-large grey-text text-darken-4 light-blue lighten-1"><i class="fa-solid fa-pen"></i> Edit</a>
-            <a href="{{ url_for('delete_task', task_id=task._id) }}" class="btn-large grey-text text-darken-4 red"><i
-                    class="fa-solid fa-trash"></i> Delete</a>
+            <!-- Modal Trigger -->
+            <button data-target="modal1" class="btn-large modal-trigger grey-text text-darken-4 red"><i
+                    class="fa-solid fa-trash"></i> Delete</button>
             {% endif %}
             {% endif %}
+            <!-- Modal Structure -->
+            <div id="modal1" class="modal">
+                <div class="modal-content">
+                    <h4>Are you sure you want to delete this opportunity?</h4>
+                </div>
+                <div class="modal-footer">
+                    <a href="{{ url_for('get_tasks') }}"
+                        class="btn grey-text text-darken-4 light-blue lighten-1"><i class="fa-solid fa-xmark"></i>
+                        Cancel</a>
+                    <a href="{{ url_for('delete_task', task_id=task._id) }}"
+                        class="btn grey-text text-darken-4 red"><i class="fa-solid fa-trash"></i> Delete</a>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         </div>
     </li>
 
