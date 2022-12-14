@@ -215,6 +215,7 @@ def apply():
         "username": request.form.get("username").lower(),
         "first_name": request.form.get("first_name").lower(),
         "last_name": request.form.get("last_name").lower(),
+        "email": request.form.get("email").lower(),
         "description": request.form.get("description").lower()
     }
     mongo.db.apply.insert_one(apply)
@@ -233,10 +234,10 @@ def contact():
     contact = {
         "first_name": request.form.get("first_name").lower(),
         "last_name": request.form.get("last_name").lower(),
-        "email": request.form.get("email"),
+        "email": request.form.get("email").lower(),
         "message": request.form.get("message").lower()
     }
-    mongo.db.apply.insert_one(document)(messages)
+    mongo.db.messages.insert_one(contact)
 
     flash("Thank you, we have recieved your message.")
     return render_template("home.html")

@@ -37,6 +37,10 @@ h5 {
   text-transform: none;
 }
 
+a {
+  color: #04294b;
+}
+
 .fa-solid {
   color: #04294b;
 }

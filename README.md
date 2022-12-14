@@ -82,6 +82,11 @@ The home or landing page will welcome visitors and volunteers and give a brief d
 ![Home Page](/static/images/readmd-images/wireframe_landing_page.png)
 ### Opportunities Page
 The opportunities page has been inspired by the [Code Institute non-relational database waltkthrough project](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+NRDB_L5+2022_Q3/courseware/9e2f12f5584e48acb3c29e9b0d7cc4fe/054c3813e82e4195b5a4d8cd8a99ebaa/) and will utilise cards to display voluteering opportunities that pulls information from a database. 
+
+The Opportunities will be searchable, and when lregistered and logged in a user will be able to apply for opportunities directly from the relevant cards.
+
+When logged in an admin will be able to edit and delete opportunities directly from these cards. Defensive programming will ensure that those who are not supposed to cannot carry out these functions.
+
 ![Opportunities Page](/static/images/readmd-images/wireframe_opportunities_page.png)
 #### Cards
 [MongoDB](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+NRDB_L5+2022_Q3/courseware/58bca0e827fc46bc862c5e2aeec97468/a4e711e56b114afaace001a03afd1c63/) will be used to create the database, and each opportunity record will be broken down into the following catagories:
@@ -103,6 +108,7 @@ In future implementations I would like to:
 - Have the apply form autofill the opportunity or tast name and the username fields.
 - Build in bilingual functionality.
 - Add logos and images to the opportunity cards so that they are more appealing and descriprive to users.
+- Have a custom error page/s (e.g. for 404/405 errors) that will redirect users back to the app.
 
 ### Accessibility
 I have been mindful during coding to ensure that the website is as accessible friendly as possible. This has been have achieved by:
@@ -110,6 +116,32 @@ I have been mindful during coding to ensure that the website is as accessible fr
 - Using descriptive alt attributes on images on the site.
 - Providing information for screen readers where there are icons used and no text.
 - Ensuring that there is a sufficient colour contrast throughout the site.
+
+## Database Schema
+[MongoDB](https://www.mongodb.com/cloud/atlas/lp/try4?utm_source=google&utm_campaign=search_gs_pl_evergreen_atlas_core_prosp-brand_gic-null_emea-gb_ps-all_desktop_eng_lead&utm_term=mongodb&utm_medium=cpc_paid_search&utm_ad=e&utm_ad_campaign_id=12212624581&adgroup=115749705343&gclid=CjwKCAiAheacBhB8EiwAItVO29sdvrgVs8vUgQ3Me6m_ziNfY-2SlCuVryM0vhVPA8GQ4zjXyz6rzxoCpZIQAvD_BwE) hasd been used to create the database, with four collections within it.
+
+![Schema](/static/images/readmd-images/schema.jpg)
+
+Apply holds information from the Application form including Opportunity Name, Username, First Name, Last Name, Email, and Description.
+
+![Apply](/static/images/readmd-images/apply.jpg)
+
+Categories holds the category types which are used to categorise or group opportunities.
+
+![Categories](/static/images/readmd-images/categories.png)
+
+The messages collection holds information from users who have used the contact form. This offers users to ask questions or communicate with the site admin. Information collected is: First Name, Last Name, Email and Message details.
+
+![Message](/static/images/readmd-images/messages.jpg)
+
+The tasks collection contains information about opportunities on offer. This includes Category Name, Task Name, Task Name, Task Description, Due Date and a Welsh Essential option.
+
+![Tasks](/static/images/readmd-images/tasks.jpg)
+
+The Users collection hold information about registered users. It holds their username and a hashed version of their password for security. This ensures no two users can hold the same username.
+
+![Users](/static/images/readmd-images/users.jpg)
+
 
 ## Technology
 ### Languages Used
@@ -232,7 +264,7 @@ As an administrator for the site I want to be able to:
 
 I have used defensive programming through my app to ensure that users who are not logged in, or users who did not create the opportunities or categories are unable to edit. This is achieved by checking whether there is a user in session, and then also checking to see if the session user is the same user who created the opportunity. Had I more time I would have liked to have developed a custom 404 pages that would direct users back to the home page, should any errors occur whilst they are using the app.
 
-I would also lige to have made use of modals to provide helpful warnings to users to signpost them, if they were trying to do something that their session profile did not support, or if records were to be deleted, would double check that the admin definately wanted to do this.
+I have made use of modals to provide helpful warnings to the admin if records are to be deleted, double check that the admin definately wanted to do this.
 
 ## Deployment
 

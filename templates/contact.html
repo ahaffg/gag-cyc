@@ -29,7 +29,7 @@
             <!-- text area -->
             <div class="row">
               <div class="input-field col s12">
-                <textarea id="description" name="description" type="description" class="materialize-textarea"
+                <textarea id="message" name="message" type="message" class="materialize-textarea"
                   class="validate" minlength="5" maxlength="500" required></textarea>
                 <label for="textarea1">Please type your message here:</label>
               </div>
@@ -47,8 +47,8 @@
           <!-- cancel button -->
           <div class="row">
             <div class="col s12 center-align">
-              <button type="cancel" class="btn-large grey-text text-darken-4 lighten-1"><a
-                  href="{{ url_for('get_home') }}">
+              <button type="cancel" class="btn-large grey-text text-darken-4 blue lighten-1"><a
+                  href="{{ url_for('get_contact') }}">
                   Cancel<i class="fas fa-xmark right"></i></a></button>
 
             </div>
