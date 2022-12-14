@@ -3,6 +3,7 @@
 
     $('.sidenav').sidenav();
     $('.parallax').parallax();
+    $('.modal').modal();
     $('#textarea1').val('New Text');
     $('#textarea1').trigger('autoresize');
     $("select").formSelect();
