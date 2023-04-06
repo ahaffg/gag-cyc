@@ -133,3 +133,7 @@ p {
   font-size: larger;
   background-color:white;
 }
+#hamburger{
+  color:white;
+  padding-top: .5em;
+}
