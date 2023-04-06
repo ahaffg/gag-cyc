@@ -8,54 +8,50 @@
     <div class="card-panel">
       <!-- personal information -->
       <div class="row">
-        <form class="col s12">
-          <div class="row">
-            <div class="input-field col s6">
-              <input id="first_name" name="first_name" type="text" class="validate" required>
-              <label for="first_name">First Name</label>
-            </div>
-            <div class="input-field col s6">
-              <input id="last_name" name="last_name" type="text" class="validate" required>
-              <label for="last_name">Last Name</label>
-            </div>
+        <div class="row">
+          <div class="input-field col s6">
+            <input id="first_name" name="first_name" type="text" class="validate" required>
+            <label for="first_name">First Name</label>
           </div>
+          <div class="input-field col s6">
+            <input id="last_name" name="last_name" type="text" class="validate" required>
+            <label for="last_name">Last Name</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s12">
+            <input id="email" name="email" type="email" class="validate" required>
+            <label for="email">Email</label>
+          </div>
+        </div>
+        <div class="row">
+          <!-- text area -->
           <div class="row">
             <div class="input-field col s12">
-              <input id="email" name="email" type="email" class="validate" required>
-              <label for="email">Email</label>
+              <textarea id="message" name="message" class="materialize-textarea" class="validate"
+                minlength="5" maxlength="500" required></textarea>
+              <label for="textarea1">Please type your message here:</label>
             </div>
           </div>
-          <div class="row">
-            <!-- text area -->
-            <div class="row">
-              <div class="input-field col s12">
-                <textarea id="message" name="message" type="message" class="materialize-textarea"
-                  class="validate" minlength="5" maxlength="500" required></textarea>
-                <label for="textarea1">Please type your message here:</label>
-              </div>
-            </div>
+        </div>
+        <!-- submit button -->
+        <div class="row">
+          <div class="col s12 center-align">
+            <button type="submit" class="btn-large grey-text text-darken-4 lime darken-3">
+              Send <i class="fas fa-plus-square right"></i>
+            </button>
           </div>
-
-          <!-- submit button -->
-          <div class="row">
-            <div class="col s12 center-align">
-              <button type="submit" class="btn-large grey-text text-darken-4 lime darken-3">
-                Send <i class="fas fa-plus-square right"></i>
-              </button>
-            </div>
+        </div>
+        <!-- cancel button -->
+        <div class="row">
+          <div class="col s12 center-align">
+            <a href="{{ url_for('get_home') }}" type="cancel"
+                class="btn-large grey-text text-darken-4 blue lighten-1">
+                Cancel<i class="fas fa-xmark right"></i></a>
           </div>
-          <!-- cancel button -->
-          <div class="row">
-            <div class="col s12 center-align">
-              <a href="{{ url_for('get_home') }}"><button type="cancel" class="btn-large grey-text text-darken-4 blue lighten-1">
-                  Cancel<i class="fas fa-xmark right"></i></button></a>
-
-            </div>
-          </div>
-        </form>
+        </div>
       </div>
     </div>
-
   </form>
 </div>
 
