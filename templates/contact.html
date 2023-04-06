@@ -11,11 +11,11 @@
         <div class="row">
           <div class="input-field col s6">
             <input id="first_name" name="first_name" type="text" class="validate" required>
-            <label for="first_name">First Name</label>
+            <label id="first_name">First Name</label>
           </div>
           <div class="input-field col s6">
             <input id="last_name" name="last_name" type="text" class="validate" required>
-            <label for="last_name">Last Name</label>
+            <label id="last_name">Last Name</label>
           </div>
         </div>
         <div class="row">
@@ -28,9 +28,9 @@
           <!-- text area -->
           <div class="row">
             <div class="input-field col s12">
-              <textarea id="message" name="message" class="materialize-textarea" class="validate"
+              <textarea id="message" name="message" class="materialize-textarea validate" 
                 minlength="5" maxlength="500" required></textarea>
-              <label for="textarea1">Please type your message here:</label>
+              <label id="textarea1">Please type your message here:</label>
             </div>
           </div>
         </div>
@@ -45,7 +45,7 @@
         <!-- cancel button -->
         <div class="row">
           <div class="col s12 center-align">
-            <a href="{{ url_for('get_home') }}" type="cancel"
+            <a href="{{ url_for('get_home') }}"
                 class="btn-large grey-text text-darken-4 blue lighten-1">
                 Cancel<i class="fas fa-xmark right"></i></a>
           </div>
