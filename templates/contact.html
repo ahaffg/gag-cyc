@@ -10,27 +10,27 @@
       <div class="row">
         <div class="row">
           <div class="input-field col s6">
-            <input id="first_name" name="first_name" type="text" class="validate" required>
-            <label>First Name</label>
+            <input id="first_name" name="first_name" type="text" aria-label="First Name" class="validate" required>
+            <label><b>First Name</b></label>
           </div>
           <div class="input-field col s6">
-            <input id="last_name" name="last_name" type="text" class="validate" required>
-            <label>Last Name</label>
+            <input id="last_name" name="last_name" type="text" aria-label="Last Name" class="validate" required>
+            <label><b>Last Name</b></label>
           </div>
         </div>
         <div class="row">
           <div class="input-field col s12">
-            <input id="email" name="email" type="email" class="validate" required>
-            <label>Email</label>
+            <input id="email" name="email" type="email" aria-label="email" class="validate" required>
+            <label><b>Email</b></label>
           </div>
         </div>
         <div class="row">
           <!-- text area -->
           <div class="row">
             <div class="input-field col s12">
-              <textarea id="message" name="message" class="materialize-textarea validate" 
+              <textarea id="message" name="message" aria-label="message" class="materialize-textarea validate"
                 minlength="5" maxlength="500" required></textarea>
-              <label>Please type your message here:</label>
+              <label><b>Please type your message here:</b></label>
             </div>
           </div>
         </div>
@@ -45,9 +45,8 @@
         <!-- cancel button -->
         <div class="row">
           <div class="col s12 center-align">
-            <a href="{{ url_for('get_home') }}"
-                class="btn-large grey-text text-darken-4 blue lighten-1">
-                Cancel<i class="fas fa-xmark right"></i></a>
+            <a href="{{ url_for('get_home') }}" class="btn-large grey-text text-darken-4 blue lighten-1">
+              Cancel<i class="fas fa-xmark right"></i></a>
           </div>
         </div>
       </div>
