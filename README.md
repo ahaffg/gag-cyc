@@ -45,6 +45,39 @@ The live site can be found [here](https://gag-cyc.herokuapp.com/)
 + [Credits](#Credits "Credits")
 
 ## UX
+
+## User Stories
+### Target Audience
+
+The target audience for GaG | CfC are students and retired peoples in the local area. They will want to find a way to contribute to the local community, make friends, or build experience towards jobs or further education courses.
+First Time Visitor Goals
+
+#### As a first time user of the site I want to be able to:
+
+- Understand what the site is for and how to navigate the site.
+- Register for an account.
+- See what other volunteers have gained from their experiences
+
+#### Returning Visitor Goals
+
+As a returning registered user of the site I want to be able to:
+
+- Log in to my account.
+- Apply for opportunities.
+- View roles I have applied for and their application status.(Future Implementation)
+
+#### Admin User
+
+As an administrator for the site I want to be able to:
+
+- Log in to my account.
+- Create, edit, delete and view opportunity categories.
+- Create, edit, delete and view oportunities.
+
+#### User Journey
+
+![Journey](/static/images/readmd-images/user_journey.jpg)
+
 ### All user goals
 - Users want to be able to view and apply for volunteering opportunities.
 - Users want to be able to create an account to manage their applications. 
@@ -182,9 +215,14 @@ HTML, CSS, JavaScript, Python
 
 [W3C](https://validator.w3.org/)
 
-![W3C](/static/images/readmd-images/w3c_validator.jpg)
-
-A couple of errors were noted through the W3C validator, however neither myself, my mentor nor  tutor were able to identify and rectify them, so unfortunately these remain.
+| Page | Result| Evidence |
+| :--- | :--- | :--- |
+| Home Page | Pass | ![Home Page](static/images/testing-images/w3chome.png) | 
+| Contact Page | Pass| ![Contact Page](static/images/testing-images/w3ccontact.png) |
+| Login Page | Pass| ![Login Page](static/images/testing-images/w3clogin.png) |
+| Add Opportunity Page | Pass | ![Add Opportunity](static/images/testing-images/w3cadd.png) | 
+| Opportunities Page | Pass| ![Opportunities Page](static/images/testing-images/w3ctasks.png) |
+| Volunteers Page | Pass| ![Login Page](static/images/testing-images/w3cvolunteers.png) |
 
 #### CSS Validation
 
@@ -208,17 +246,30 @@ Again, the issues raised by JSHint seem to be related to the code that was impor
 
 [WAVE Web Accessibility Evaluation Tools](https://wave.webaim.org/)
 
-![Wave](/static/images/readmd-images/wave.jpg)
-
-I've spent a fair ammount of time correcting issues raised by WAVE, which has had a big impact on the overall look of my site. It is not as engaging as I had originally hoped, but accesibility is obviously of paramount importannce, espectially regarting a volunteers website. I wasn't able to locate the one error raised relating to a broken link, nor was the website able to give me more information about it, so unfortunately another bug will have to remain here.
+| Page | Result| Evidence |
+| :--- | :--- | :--- |
+| Home Page | Pass | ![Home Page](static/images/testing-images/wavehome.png) | 
+| Contact Page | Pass| ![Contact Page](static/images/testing-images/wavecontact.png) |
+| Login Page | Pass| ![Login Page](static/images/testing-images/w3clogin.png) |
+| Add Opportunity Page | Pass | ![Add Opportunity](static/images/testing-images/waveadd.png) | 
+| Opportunities Page | Pass| ![Opportunities Page](static/images/testing-images/wavegettasks.png) |
+| Volunteers Page | Pass| ![Login Page](static/images/testing-images/wavevolunteers.png) |
 
 #### Lighthouse
 
 [Lighthouse](https://developer.chrome.com/docs/lighthouse/overview/)
 
-![Lighthouse](/static/images/readmd-images/lighthouse.jpg)
-
-I'm pretty happy with these scores (especially the accesability element!) Obviously I would neext to keep an eye on these were the app to grow and hold more images, as this would potentially have a negative effect.
+| Page | Result| Evidence |
+| :--- | :--- | :--- |
+| Home Page | Pass | ![Home Page](static/images/testing-images/lighthousehome.png) | 
+| Contact Page | Pass| ![Contact Page](static/images/testing-images/lighthousecontact.png) |
+| Login Page | Pass| ![Login Page](static/images/testing-images/lighthouselogin.png) |
+| Add Opportunity Page | Pass | ![Add Opportunity](static/images/testing-images/lighthouseadd.png) | 
+| Opportunities Page | Pass| ![Opportunities Page](static/images/testing-images/lighthouseopportunities.png) |
+| Volunteers Page | Pass| ![Login Page](static/images/testing-images/lighthousevolunteers.png) |
+| Profile Page | Pass| ![Profile Page](static/images/testing-images/lighthouseprofile.png) |
+| Register Page | Pass| ![Register Page](static/images/testing-images/lighthouseregister.png) |
+| Manage Categories Page | Pass| ![Manage Categories Page](static/images/testing-images/lighthouseregister.png) |
 
 #### CI Python Linter
 
@@ -226,39 +277,6 @@ I'm pretty happy with these scores (especially the accesability element!) Obviou
 
 ![Python](/static/images/readmd-images/ci_pythonlinter.jpg)
 
-No Errors found. In the words of the great and glorious Lizzo: "It's about damn time" !!!
-
-## User Stories
-### Target Audience
-
-The target audience for GaG | CfC are students and retired peoples in the local area. They will want to find a way to contribute to the local community, make friends, or build experience towards jobs or further education courses.
-First Time Visitor Goals
-
-#### As a first time user of the site I want to be able to:
-
-- Understand what the site is for and how to navigate the site.
-- Register for an account.
-- See what other volunteers have gained from their experiences
-
-#### Returning Visitor Goals
-
-As a returning registered user of the site I want to be able to:
-
-- Log in to my account.
-- Apply for opportunities.
-- View roles I have applied for and their application status.(Future Implementation)
-
-#### Admin User
-
-As an administrator for the site I want to be able to:
-
-- Log in to my account.
-- Create, edit, delete and view opportunity categories.
-- Create, edit, delete and view oportunities.
-
-#### User Journey
-
-![Journey](/static/images/readmd-images/user_journey.jpg)
 
 ### Defensive Programming
 
