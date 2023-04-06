@@ -26,8 +26,7 @@
       <div class="input-field col s12">
         <i class="fas fa-pencil-alt prefix light-blue-text text-darken-4">
         </i>
-        <input id="task_name" name="task_name" minlength="5" maxlength="50"
-               type="text" class="validate" required>
+        <input id="task_name" name="task_name" minlength="5" maxlength="50" type="text" class="validate" required>
         <label for="task_name">Task Name
         </label>
       </div>
@@ -37,8 +36,8 @@
       <div class="input-field col s12">
         <i class="fas fa-align-left prefix light-blue-text text-darken-4">
         </i>
-        <textarea id="task_description" name="task_description" minlength="5"
-                  maxlength="200" class="materialize-textarea validate" required>
+        <textarea id="task_description" name="task_description" minlength="5" maxlength="200"
+          class="materialize-textarea validate" required>
         </textarea>
         <label for="task_description">Description
         </label>
@@ -73,7 +72,7 @@
     <div class="row">
       <div class="col s12 center-align">
         <button type="submit" class="btn-large grey-text text-darken-4 lime darken-3">
-          Add Task 
+          Add Task
           <i class="fas fa-plus-square right">
           </i>
         </button>
@@ -83,14 +82,12 @@
     <div class="row">
       <div class="col s12 center-align">
         <a href="{{ url_for('get_tasks') }}">
+          <button id="cancel" class="btn-large grey-text text-darken-4 light-blue lighten-1">
+            Cancel <i class="fas fa-xmark right">
+            </i>
         </a>
-        <button type="cancel" class="btn-large grey-text text-darken-4 light-blue lighten-1">
-          Cancel
-          <i class="fas fa-xmark right">
-            </a>
-          </i>
         </button>
-    </div>
+      </div>
     </div>
   </form>
 </div>
