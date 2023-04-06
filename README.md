@@ -226,21 +226,17 @@ HTML, CSS, JavaScript, Python
 
 #### CSS Validation
 
-[W3C Jigsaw](https://jigsaw.w3.org/css-validator/)
+[W3C Jigsaw](https://jigsaw.w3.org/css-validator/) was used to validate the style.css file.
 
-![Jisgaw](/static/images/readmd-images/jigsaw.jpg)
-
-I am honestly so disapointed there have been so many errors thrown up by the CSS validator. I think even with  limitless time it would be impossible to address them all. I hope that a large ammount are associated with the Materialize code used to create the template for the app, so there is little I can do to address this. However the issues with the links in the head of the dom are really confusing as these are taken from cdnjs.com/(https://cdnjs.com/) so again I would have thought these cannot be altered. I'm not sure what else I can say about this other than the fact that the app seems to work and look the way I would like it to, and that these are issues expected with using external templates.
+![Style.css](static/images/testing-images/stylecss.png)
 
 #### JavaScript Validator
 
-[JS Hint](https://jshint.com/)
+[JS Hint](https://jshint.com/) was used to validate the script.js file.
 
-![innit-script](/static/images/readmd-images/innit-jshint.jpg)
+N.B init.js, materialize.js and materialize.min.js were not validated as they are required files from Materialize.
 
-![js-script](/static/images/readmd-images/script-jshint.jpg)
-
-Again, the issues raised by JSHint seem to be related to the code that was imported from Materialize, so not something that is easily addressed. If I had more time I would definately look ate this more closely to see if it was possible to address the issues without having a negative affect on the app.
+![script.js](static/images/testing-images/jshint.png)
 
 #### WAVE Validator
 
@@ -269,7 +265,7 @@ Again, the issues raised by JSHint seem to be related to the code that was impor
 | Volunteers Page | Pass| ![Login Page](static/images/testing-images/lighthousevolunteers.png) |
 | Profile Page | Pass| ![Profile Page](static/images/testing-images/lighthouseprofile.png) |
 | Register Page | Pass| ![Register Page](static/images/testing-images/lighthouseregister.png) |
-| Manage Categories Page | Pass| ![Manage Categories Page](static/images/testing-images/lighthouseregister.png) |
+| Manage Categories Page | Pass| ![Manage Categories Page](static/images/testing-images/lighthousecategory.png) |
 
 #### CI Python Linter
 
