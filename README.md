@@ -228,6 +228,8 @@ HTML, CSS, JavaScript, Python
 
 [W3C Jigsaw](https://jigsaw.w3.org/css-validator/) was used to validate the style.css file.
 
+N.B. materialize.css and materialize.min.css were not validated as these are required files from Materialize.
+
 ![Style.css](static/images/testing-images/stylecss.png)
 
 #### JavaScript Validator
