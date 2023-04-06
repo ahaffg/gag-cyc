@@ -26,10 +26,7 @@
       <div class="nav-wrapper">
         <a href="{{ url_for('get_home') }}" class="brand-logo white-text pad-left">GaG | CfC
         </a>
-        <a href="#" data-target="mobile-demo" class="sidenav-trigger right">
-          <i class="fas fa-bars">
-          </i>
-        </a>
+        <a href="#" data-target="mobile-demo" class="text-white collapse navbar-collapse justify-content-end sidenav-trigger right"><i class="fas fa-bars"></i></a>
         <ul class="right hide-on-med-and-down">
           <li>
             <a class="white-text" href="{{ url_for('get_home') }}">Home
@@ -80,7 +77,7 @@
       </div>
     </nav>
     <!-- mobile sidenav -->
-      <ul class="sidenav" id="mobile-demo" aria="mobile nav bar">
+      <ul class="sidenav" id="mobile-demo" aria="mobile nav">
       <li>
         <a href="{{ url_for('get_home') }}">Home
         </a>
