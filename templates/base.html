@@ -155,7 +155,7 @@
     </div>
   </div>
   <!-- flash messages -->
-  <section>
+  <div>
     {% with messages = get_flashed_messages() %}
     {% if messages %}
     {% for message in messages %}
@@ -166,11 +166,11 @@
     {% endfor %}
     {% endif %}
     {% endwith %}
-  </section>
-  <main class="container">
+  </div>
+  <div class="container">
     {% block content %}
     {% endblock %}
-  </main>
+  </div>
   <!-- footer banner image -->
   <div class="parallax-container valign-wrapper">
     <div class="section no-pad-bot">
