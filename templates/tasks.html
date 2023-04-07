@@ -62,8 +62,8 @@
             {% if session.user|lower == 'admin' %}
             <a href="{{ url_for('edit_task', task_id=task._id) }}"
                 class="btn-large grey-text text-darken-4 light-blue lighten-1"><i class="fa-solid fa-pen"></i> Edit</a>
-            <button data-target=" {{ task._id }}"
-                class="btn-large modal-trigger grey-text text-darken-4 red"><i class="fa-solid fa-trash"></i> Delete</button>
+            <a data-target=" {{ task._id }}"
+                class="btn-large modal-trigger grey-text text-darken-4 red"><i class="fa-solid fa-trash"></i> Delete</a>
             {% endif %}
             {% endif %}
             <!-- Modal Structure -->

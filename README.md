@@ -112,7 +112,8 @@ The colours were sampled in Gimp and then fine-tuned using Coolors. The feel is 
 
 ### Favicon
 
-![Favicon](static/favicon/android-chrome-192x192.png)  ![Favicon](static/favicon/apple-touch-icon.png)
+![Favicon](static/favicon/android-chrome-192x192.png)  ![Favicon](static/favicon/apple-touch-icon.png) ![Favicon](static/favicon/apple-touch-icon.png)
+
 Favicon has been used to generate the icon that is seen on the page tab when loaded.
 
 ## Wireframes
