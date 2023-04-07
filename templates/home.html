@@ -22,11 +22,10 @@
   <div class="container">
     <div class="section">
       <div class="row">
-        <div class="col my-auto">
+        <div class="container">
           <div class="icon-block center center-align">
             <i class="center-align fa-solid fa-seedling large text-shadow"></i>
             <h4 class="center heavy">Environment</h4>
-
             <p class="heavy">Do you care deeply about the environment? Would you
               like to keep the local area safe and accesable for the comminuity
               and wildlife? If so, we've teamed up with local organisations
@@ -34,15 +33,17 @@
               rewarding opportunities available for all ages and levels of
               ability, click below to see out latest opportunities.</p>
           </div>
-          <a href="{{ url_for('get_tasks') }}" class="align-center center grey-text text-darken-4 lime darken-3 btn-large"><i
-              class="fa-solid fa-seedling"></i>  Environment</a>
+          <div class="center center-align">
+            <a href="{{ url_for('get_tasks') }}"
+              class="align-center center grey-text text-darken-4 lime darken-3 btn-large"><i
+                class="fa-solid fa-seedling"></i> Environment</a>
+          </div>
         </div>
-
-        <div class="col m12">
+        <hr>
+        <div class="container my-auto">
           <div class="icon-block center center-align">
             <i class="fa-solid fa-person-breastfeeding large text-shadow"></i>
             <h4 class="center heavy">People</h4>
-
             <p class="heavy">Are you good with people? Do you always seem to be able to
               calm people or make them smile? Then organisations like Hafan Y Waun,
               Mudiad Meithrin and Mind would love to hear from you! No matter
@@ -50,30 +51,34 @@
               where you can make a difference. Click below to see what will
               be a good fit for you! </p>
           </div>
-          <a href="{{ url_for('get_tasks') }}" class="align-center center grey-text text-darken-4 lime darken-3 btn-large"><i
-              class="fa-solid fa-person-breastfeeding"></i>  People</a>
+          <div class="center center-align">
+            <a href="{{ url_for('get_tasks') }}"
+              class="align-center center grey-text text-darken-4 lime darken-3 btn-large"><i
+                class="fa-solid fa-person-breastfeeding"></i> People</a>
+          </div>
         </div>
-
-        <div class="col m12">
+        <hr>
+        <div class="container my-auto">
           <div class="icon-block center center-align">
             <i class="fa-solid fa-paw large text-shadow"></i>
             <h4 class="center heavy">Animals</h4>
-
             <p class="heavy">Do you consider yourself a Dr Dolittle? Do you have an
               affinity with animals? Charities like Cats Protection League, Ystwyth
               Vets and RSPA Ceredigion branch are in need of kind, patient and reliable
               volunteers to help them with the animals in their care. If you can help,
               check out out opportunities by clicking the button below</p>
           </div>
-          <a href="{{ url_for('get_tasks') }}" class="align-center center grey-text text-darken-4 lime darken-3 btn-large"><i
-              class="fa-solid fa-paw"></i>  Animals</a>
+          <div class="center center-align">
+            <a href="{{ url_for('get_tasks') }}"
+              class="center center-align grey-text text-darken-4 lime darken-3 btn-large"><i
+                class="fa-solid fa-paw"></i> Animals</a>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </section>
-  <hr>
-  <br>
-  <br>
-
-  {% endblock %}
+<hr>
+<br>
+<br>
+{% endblock %}

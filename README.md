@@ -36,7 +36,6 @@ The live site can be found [here](https://gag-cyc.herokuapp.com/)
   + [Languages Used](#languages-used "Languages Used")
   + [Database Used](#database-used "Database Used")
   + [Frameworks Used](#frameworks-used "Frameworks Used")
-  + [Libraries & Packages Used](#libraries-&-packages-used "Libraries & Packages Used")
   + [Programs Used](#programs-used "Programs Used")
 + [Testing](#testing "Testing")
   + [User Stories](#user-stories "User Stories")
@@ -138,10 +137,10 @@ In order for the website to work there also needs to be functionality for the us
 
 ### Future Implementations
 In future implementations I would like to:
-- Have the apply form autofill the opportunity or tast name and the username fields.
+- Have the apply form autofill the opportunity or tasK name and the username fields.
 - Build in bilingual functionality.
 - Add logos and images to the opportunity cards so that they are more appealing and descriprive to users.
-- Have a custom error page/s (e.g. for 404/405 errors) that will redirect users back to the app.
+- Have a custom error page/s (e.g. for 404/405 errors) that will redirect users back to the app if an error occurs.
 
 ### Accessibility
 I have been mindful during coding to ensure that the website is as accessible friendly as possible. This has been have achieved by:
@@ -208,6 +207,8 @@ HTML, CSS, JavaScript, Python
 [Google Dev Tools](https://developers.google.com/web/) - To troubleshoot, test features and solve issues with responsiveness and styling.
 
 [Pip](https://pip.pypa.io/en/stable/index.html) - A tool for installing Python packages.
+
+
 
 ## Testing
 

@@ -13,6 +13,10 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="{{ url_for('static', filename='css/materialize.css') }}" type="text/css" rel="stylesheet" media="screen">
   <link href="{{ url_for('static', filename='css/style.css') }}" type="text/css" rel="stylesheet" media="screen">
+  <link rel="apple-touch-icon" sizes="180x180" href="/static/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/static/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/static/favicon/favicon-16x16.png">
+  <link rel="manifest" href="/static/favicon/site.webmanifest">
   {% block styles %}
   {% endblock %}
   <title>Gofalu am Geredigion | Caring for Ceredigion
@@ -24,9 +28,10 @@
     <!-- top navbar -->
     <nav class="nav-extended text-shadow">
       <div class="nav-wrapper">
-        <a href="{{ url_for('get_home') }}" class="brand-logo white-text pad-left">GaG | CfC
+        <a href="{{ url_for('get_home') }}" class="brand-logo white-text pad-left" id="navlogo">GaG | CfC
         </a>
-        <i id="hamburger" class="fas fa-bars collapse navbar-collapse justify-content-end sidenav-trigger right" data-target="mobile-demo"></i>
+        <i id="hamburger" class="fas fa-bars collapse navbar-collapse justify-content-end sidenav-trigger right"
+          data-target="mobile-demo"></i>
         <ul class="right hide-on-med-and-down">
           <li>
             <a class="white-text" href="{{ url_for('get_home') }}">Home
@@ -77,7 +82,7 @@
       </div>
     </nav>
     <!-- mobile sidenav -->
-      <ul class="sidenav" id="mobile-demo" aria="mobile nav">
+    <ul class="sidenav" id="mobile-demo" aria="mobile nav">
       <li>
         <a href="{{ url_for('get_home') }}">Home
         </a>

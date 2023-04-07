@@ -137,3 +137,11 @@ p {
   color:white;
   padding-top: .5em;
 }
+
+#navlogo {
+  padding-left: .5em;
+}
+
+#center-align {
+  align-items: center;
+}
