@@ -63,7 +63,7 @@
             <a href="{{ url_for('edit_task', task_id=task._id) }}"
                 class="btn-large grey-text text-darken-4 light-blue lighten-1"><i class="fa-solid fa-pen"></i> Edit</a>
             <!-- Modal Trigger -->
-            <button data-target="modal1" class="btn-large modal-trigger grey-text text-darken-4 red"><i
+            <button href="{{ url_for('delete_task', task_id=task._id) }}" data-target="modal1" class="btn-large modal-trigger grey-text text-darken-4 red"><i
                     class="fa-solid fa-trash"></i> Delete</button>
             {% endif %}
             {% endif %}
