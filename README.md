@@ -209,8 +209,20 @@ HTML, CSS, JavaScript, Python
 [Pip](https://pip.pypa.io/en/stable/index.html) - A tool for installing Python packages.
 
 
-
 ## Testing
+
+### User Stories
+
+| As a... I want to... | Action | Evidence |
+| :--- | :--- | :--- |
+| As a potential volunteer I want to be able register to the site to apply for opportunities. | By clicking on "Register" I can fill out a simple form to register to the site. I am shown a message when I am successful. | ![register](static/images/testing-images/userstoriesregister.png) |
+| As a registered user I want to be able to login. | By clicking on the "Login" link on the main nav bar I can enter my details and succefully log in. I can then logout by selecting the "logout" link on the nav bar when I am done. I will see a message telling me that I have succesfully logged out. | ![Login Page](static/images/testing-images/userstorieslogingout.png) |
+| As a registered user I want to be able to see my profile. | When logged in I can view the "Profile" link option oon the main nav bar. This does not show if I am not logged in. | ![Profile](static/images/testing-images/userstoriesprofile.png) |
+| As a potential volunteer I want to be able to view all the opportunities on offer, and apply for them. | When logged in I can view the opportunities on offer in the Opportunities page and when I am ready, I can click the "Apply" button which will take me to a form. I can fill in the form and once I click "Send" I am shown a message that shows my application has been sent. | ![Apply](static/images/testing-images/userstoriesapply.png) |
+| As a site user I want to send a message | I can navigate to the contact form which is a link on the main nav bar, fill out the form and recieve a message assuring me that my message has been sent. | ![Contact Page](static/images/testing-images/userstoriescontact.png) |
+| As a site admin I want to be able to add opportunities. | When logged in as a site admin, the option to add a task or opportunity is shown as a link "New Task" in the main nav bar. This link is not visible to ordinary users or admins who are not logged in.Clicking on this takes me to a form that I can fill out giving details about category/title, description/due date and if the task requires a Welsh speaking individual. When I select the "Add Task" button, I am shown a message that the task has been succesfully added.| ![Add Opportunity](static/images/testing-images/userstoriesadd.png) | 
+| As a site admin I want to be able to edit opportunities. | When logged in as a site admin, the option to edit a task or opportunity is shown as a button when a task is opened on the "Opportunities page". This button is not visible to ordinary users or admins who are not logged in. Clicking on the button takes me to a form that contains all the current task information, and I can esily change whatever I need to. If I decide to cancel the action, I can click the cancel button and I am returned to the opportunities page with no edits having been made to the task. If I decide to keep the edits, I can select "Edit Task" and the task will be re-submitted with the new information. I will also be shown a message confirming that the edit has been succesful.. When I select the "Add Task" button, I am shown a message that the task has been succesfully added.| ![Edit Opportunities](static/images/testing-images/userstoriesedittask.png) |
+| As a site admin I want to be able to delete opportunities. | When logged in as a site admin, the option to delete a task or opportunity is shown as a button when a task is opened on the "Opportunities page". This button is not visible to ordinary users or admins who are not logged in. Clicking on the button shows a message confirming that the task has been succesfully deleted.| ![Delete Opportunities](static/images/testing-images/userstoriesdelete.png) |
 
 #### HTML Validation
 
