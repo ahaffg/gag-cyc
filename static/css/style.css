@@ -141,3 +141,7 @@ p {
 #navlogo {
   padding-left: .5em;
 }
+
+.modal {
+  position: absolute;
+}
